@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JaizOpenDigitalBankingModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProviderRecognizedID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShortName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Narration" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LogoUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Surcharge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomSectionUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuickTellerSiteUrlName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SupportEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuickTellerCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="CustomerFieldLabel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billerID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bills2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProviderRecognizedID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShortName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Narration" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LogoUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Surcharge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomSectionUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuickTellerSiteUrlName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SupportEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuickTellerCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="CustomerFieldLabel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="billerID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProviderRecognizedItemId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsumerIdField" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConvertedAmount" Type="Decimal" Precision="18" Scale="8" Nullable="false" />
+    <Property Name="BillID" Type="Int32" Nullable="false" />
+    <Property Name="IsAmountFixed" Type="Boolean" Nullable="false" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+    <Property Name="PictureId" Type="Int32" Nullable="false" />
+    <Property Name="PaymentCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiniAmount" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="MaxAmount" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="logID" />
+    </Key>
+    <Property Name="logID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="logDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="logIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="logXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="logXMLOutDate" Type="DateTime" Precision="3" />
+    <Property Name="logXMLOut" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="methodName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="otprequest">
+    <Key>
+      <PropertyRef Name="otpRequestID" />
+    </Key>
+    <Property Name="otpRequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="otpDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="otpPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="otpAccountNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="otpExpiry" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="otp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuickTellerCategories2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuickTellerCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="PictureUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBFIList">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIListDetailSN" Type="Int32" />
+    <Property Name="InstitutionCode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="InstitutionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="LongInstitutionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="OldInstitutionCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="statusID" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransType">
+    <Key>
+      <PropertyRef Name="typeID" />
+    </Key>
+    <Property Name="typeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typeAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="transType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="transName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="channelCode" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cipherphrase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vend">
+    <Key>
+      <PropertyRef Name="airtimeVendID" />
+    </Key>
+    <Property Name="airtimeVendID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catID" Type="Int32" Nullable="false" />
+    <Property Name="serviceID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="airtimeVendName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vendingcat">
+    <Key>
+      <PropertyRef Name="vendingID" />
+    </Key>
+    <Property Name="vendingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vendName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="serviceID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="vendType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="QuickTellerCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="QuickTellerCategoryId" />
+      <PropertyRef Name="Visible" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuickTellerCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="PictureUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CategoryBill">
+    <Key>
+      <PropertyRef Name="BillerID" />
+      <PropertyRef Name="BillerCategoryId" />
+    </Key>
+    <Property Name="BillerID" Type="Int32" Nullable="false" />
+    <Property Name="BillerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BillerCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="ReferenceDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BillerCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="JaizOpenDigitalBankingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bills" EntityType="Self.Bill" />
+    <EntitySet Name="Bills2" EntityType="Self.Bills2" />
+    <EntitySet Name="Items" EntityType="Self.Item" />
+    <EntitySet Name="logs" EntityType="Self.log" />
+    <EntitySet Name="otprequests" EntityType="Self.otprequest" />
+    <EntitySet Name="QuickTellerCategories2" EntityType="Self.QuickTellerCategories2" />
+    <EntitySet Name="TBFILists" EntityType="Self.TBFIList" />
+    <EntitySet Name="TransTypes" EntityType="Self.TransType" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="vends" EntityType="Self.vend" />
+    <EntitySet Name="vendingcats" EntityType="Self.vendingcat" />
+    <EntitySet Name="QuickTellerCategories" EntityType="Self.QuickTellerCategory" />
+    <EntitySet Name="CategoryBills" EntityType="Self.CategoryBill" />
+    <EntitySet Name="Items2" EntityType="JaizOpenDigitalBankingModel1.Items2" />
+  </EntityContainer>
+  <EntityType Name="Items2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProviderRecognizedItemId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsumerIdField" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConvertedAmount" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+    <Property Name="BillID" Type="Int32" Nullable="false" />
+    <Property Name="IsAmountFixed" Type="Boolean" Nullable="false" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+    <Property Name="PictureId" Type="Int32" Nullable="false" />
+    <Property Name="PaymentCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiniAmount" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="MaxAmount" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>

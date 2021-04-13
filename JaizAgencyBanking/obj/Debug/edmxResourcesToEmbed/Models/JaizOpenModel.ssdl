@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JaizOpenDigitalBankingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBFIList">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIListDetailSN" Type="int" />
+    <Property Name="InstitutionCode" Type="varchar" MaxLength="6" />
+    <Property Name="InstitutionName" Type="varchar" MaxLength="200" />
+    <Property Name="Category" Type="varchar" MaxLength="5" />
+    <Property Name="LongInstitutionName" Type="varchar" MaxLength="200" />
+    <Property Name="OldInstitutionCode" Type="varchar" MaxLength="5" />
+    <Property Name="statusID" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="JaizOpenDigitalBankingModelStoreContainer">
+    <EntitySet Name="TBFIList" EntityType="Self.TBFIList" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

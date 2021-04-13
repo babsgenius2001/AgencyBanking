@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ImalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AMF">
+    <Key>
+      <PropertyRef Name="COMP_CODE" />
+      <PropertyRef Name="BRANCH_CODE" />
+      <PropertyRef Name="CURRENCY_CODE" />
+      <PropertyRef Name="GL_CODE" />
+      <PropertyRef Name="CIF_SUB_NO" />
+      <PropertyRef Name="SL_NO" />
+    </Key>
+    <Property Name="COMP_CODE" Type="Int16" Nullable="false" />
+    <Property Name="BRANCH_CODE" Type="Int16" Nullable="false" />
+    <Property Name="CURRENCY_CODE" Type="Int16" Nullable="false" />
+    <Property Name="GL_CODE" Type="Int32" Nullable="false" />
+    <Property Name="CIF_SUB_NO" Type="Int32" Nullable="false" />
+    <Property Name="SL_NO" Type="Int16" Nullable="false" />
+    <Property Name="ACC_BC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="GMI_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DIV" Type="Int16" />
+    <Property Name="DEPT" Type="Int16" />
+    <Property Name="ACC_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHQ_SRL" Type="Int32" />
+    <Property Name="BRIEF_NAME_ENG" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LONG_NAME_ENG" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="BRIEF_NAME_ARAB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LONG_NAME_ARAB" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_OPND" Type="DateTime" Nullable="false" />
+    <Property Name="DATE_CLOSD" Type="DateTime" />
+    <Property Name="BF_FC_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="BF_CV_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="BF_FC_VAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="BF_CV_VAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="BF_DR_TRANS" Type="Int64" />
+    <Property Name="BF_CR_TRANS" Type="Int64" />
+    <Property Name="OVERLAP_FC_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OVERLAP_CV_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OVERLAP_FC_VAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OVERLAP_CV_VAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="YTD_FC_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="YTD_CV_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="YTD_DR_TRANS" Type="Int64" />
+    <Property Name="YTD_CR_TRANS" Type="Int64" />
+    <Property Name="FC_AVAIL_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="CV_AVAIL_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OBP_FC_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OBP_CV_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OBP_FC_VAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OBP_CV_VAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OBM_CLOSE_DTE" Type="DateTime" />
+    <Property Name="LPM_PERIOD_NO" Type="Int16" />
+    <Property Name="LPM_FC_MOVE" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="LPM_CV_MOVE" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="LPM_DR_TRANS" Type="Int64" />
+    <Property Name="LPM_CR_TRANS" Type="Int64" />
+    <Property Name="CPM_FC_MOVE" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="CPM_CV_MOVE" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="CPM_DR_TRANS" Type="Int64" />
+    <Property Name="CPM_CR_TRANS" Type="Int64" />
+    <Property Name="LDC_FC_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="LDC_CV_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="LDC_DR_TRANS" Type="Int64" />
+    <Property Name="LDC_CR_TRANS" Type="Int64" />
+    <Property Name="LDC_DATE" Type="DateTime" />
+    <Property Name="OLM_FC_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OLM_CV_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="OLM_DR_TRANS" Type="Int64" />
+    <Property Name="OLM_CR_TRANS" Type="Int64" />
+    <Property Name="LAST_TRANS_DATE" Type="DateTime" />
+    <Property Name="PT_IND" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PT_PERIOD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PT_METHOD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FL_IND" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FL_AMT" Type="Decimal" Precision="14" Scale="3" />
+    <Property Name="COMM_FEES" Type="Decimal" Precision="7" Scale="3" />
+    <Property Name="LAST_FC_POINTS" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="LAST_CV_POINTS" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="LAST_DATE_CALC" Type="DateTime" />
+    <Property Name="ACC_FC_POINTS" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="ACC_CV_POINTS" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="AC_SIGN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DR_PT_INDEX" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DR_APPL_DATE" Type="DateTime" />
+    <Property Name="DR_PT_RATE" Type="Decimal" Precision="11" Scale="6" />
+    <Property Name="CR_PT_INDEX" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CR_APPL_DATE" Type="DateTime" />
+    <Property Name="CR_PT_RATE" Type="Decimal" Precision="11" Scale="6" />
+    <Property Name="REMARKS" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ENTERED_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_ENTERED" Type="DateTime" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_MODIFIED" Type="DateTime" />
+    <Property Name="DELETED_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_DELETED" Type="DateTime" />
+    <Property Name="CLOSED_IND" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ORIGIN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TRS_NO" Type="Int64" />
+    <Property Name="MAIL_STMT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MAIL_ADVISE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MIN_STMT_BAL" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="STMT_PERIOD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SUSPENDED_BY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_SUSPENDED" Type="DateTime" />
+    <Property Name="REINSTATED_BY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_REINSTATED" Type="DateTime" />
+    <Property Name="AC_SRL" Type="Int64" />
+    <Property Name="AUTH_REJ_DTE" Type="DateTime" />
+    <Property Name="AUTH_REJ_USR" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_SIGN" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="DEPOSIT_DTE" Type="DateTime" />
+    <Property Name="DEPOSIT_RATE" Type="Decimal" Precision="10" Scale="6" />
+    <Property Name="DEPOSIT_EQUIV" Type="Decimal" Precision="15" Scale="3" />
+    <Property Name="TRF_CY" Type="Int16" />
+    <Property Name="TRF_GL" Type="Int32" />
+    <Property Name="TRF_CIF" Type="Int32" />
+    <Property Name="TRF_SL" Type="Int16" />
+    <Property Name="RENEW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EXT_TRF" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MATURITY_GL" Type="Int32" />
+    <Property Name="DOWN_GRD_DTE" Type="DateTime" />
+    <Property Name="EFF_CLSD_DTE" Type="DateTime" />
+    <Property Name="LAST_ACT_DTE" Type="DateTime" />
+    <Property Name="LAST_ACT_USR" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CLOSED_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="MATURITY_DTE" Type="DateTime" />
+    <Property Name="OFF_CY" Type="Int16" />
+    <Property Name="OFF_GL" Type="Int32" />
+    <Property Name="OFF_CIF" Type="Int32" />
+    <Property Name="OFF_SL" Type="Int16" />
+    <Property Name="NEW_GL" Type="Int32" />
+    <Property Name="NEW_IND" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_TRS_DATE" Type="DateTime" />
+    <Property Name="INITIAL_DEPOSIT_DTE" Type="DateTime" />
+    <Property Name="ACTUAL_DEPOSIT" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="BLOCKED_FC" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="BLOCKED_CV" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="PRINT_DR_ADVICE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PRINT_CR_ADVICE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ACCOUNT_NUMBER" Type="String" MaxLength="34" FixedLength="false" Unicode="false" />
+    <Property Name="MODARIB_RATE" Type="Decimal" Precision="9" Scale="6" />
+    <Property Name="RISK_PROV" Type="Decimal" Precision="9" Scale="6" />
+    <Property Name="FIRST_TRANS_DATE" Type="DateTime" />
+    <Property Name="SS_ACC_NO" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_DATE1" Type="DateTime" />
+    <Property Name="ADD_DATE2" Type="DateTime" />
+    <Property Name="ADD_DATE3" Type="DateTime" />
+    <Property Name="ADD_DATE4" Type="DateTime" />
+    <Property Name="ADD_DATE5" Type="DateTime" />
+    <Property Name="ADD_NUMBER1" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="ADD_NUMBER2" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="ADD_NUMBER3" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="ADD_NUMBER4" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="ADD_NUMBER5" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="ADD_STRING1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_STRING2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_STRING3" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_STRING4" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_STRING5" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ADDITIONAL_REFERENCE" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FROM_ACCOUNT" Type="String" MaxLength="34" FixedLength="false" Unicode="false" />
+    <Property Name="POINT_ACCRUAL_TO_MATURITY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PT_METHOD_DAYS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATE_PASSBOOK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="WITHD_PER" Type="Decimal" Precision="20" Scale="6" />
+    <Property Name="MIN_DEP" Type="Decimal" Precision="20" Scale="6" />
+    <Property Name="PFT_GL" Type="Int32" />
+    <Property Name="PFT_CIF" Type="Int32" />
+    <Property Name="PFT_SL" Type="Int16" />
+    <Property Name="PFT_POST_TO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PROFIT_CALC_GROUP" Type="Int16" />
+    <Property Name="LOCK_STATUS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="OLD_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CHQ_SERIAL_NO" Type="Int32" />
+    <Property Name="OTHER_PROVISION" Type="Decimal" Precision="9" Scale="6" />
+    <Property Name="CURRENCY_MIN_BAL" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="DIV_CODE" Type="Int16" />
+    <Property Name="DEPT_CODE" Type="Int16" />
+    <Property Name="SUB_NO" Type="Int32" />
+    <Property Name="SUSPEND_REASON" Type="Int16" />
+    <Property Name="MODE_COMM" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="UNIT_CODE" Type="Int16" />
+    <Property Name="PROFIT_AMT" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="PROFIT_PERC" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="HOLD_TRX_TYPE" Type="Int16" />
+    <Property Name="OPEN_DEP_TRX_TYPE" Type="Int16" />
+    <Property Name="OPEN_DEP_AMOUNT" Type="Decimal" Precision="20" Scale="6" />
+    <Property Name="RENEWAL_MATURITY_DATE" Type="DateTime" />
+    <Property Name="RENEWAL_MATURITY_DAYS" Type="Int32" />
+    <Property Name="AMF_ALERT_STATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="RESIDENT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TO_CLOSE_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="TO_CLOSE_DATE" Type="DateTime" />
+    <Property Name="ENFORCE_SIGN_LIMIT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="RENEW_SL" Type="Int16" />
+    <Property Name="MATURITY_DAYS" Type="Int32" />
+    <Property Name="TO_SUSPEND_DATE" Type="DateTime" />
+    <Property Name="TO_SUSPEND_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="TO_REACTIVATE_DATE" Type="DateTime" />
+    <Property Name="TO_REACTIVATE_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="TO_REJECT_DATE" Type="DateTime" />
+    <Property Name="TO_REJECT_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CERTIFICATE_PRINT_COUNT" Type="Int16" />
+    <Property Name="CUR_AC_BR" Type="Int16" />
+    <Property Name="CUR_AC_CY" Type="Int16" />
+    <Property Name="CUR_AC_GL" Type="Int32" />
+    <Property Name="CUR_AC_CIF" Type="Int32" />
+    <Property Name="CUR_AC_SL" Type="Int16" />
+    <Property Name="HOLD_AMOUNT" Type="Decimal" Precision="20" Scale="6" />
+    <Property Name="RATE_REFERENCE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RENEW_FD_SEQ" Type="Int16" />
+    <Property Name="MIN_BALANCE_POINTS" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="MAX_OVERDRAW_BAL" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="MIN_OVERDRAW_POINTS" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="LAST_RENEW_DATE" Type="DateTime" />
+    <Property Name="BROUGHT_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DISCNT_FACT" Type="Decimal" Precision="11" Scale="6" />
+    <Property Name="GL_TERM" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="STRUCTURED" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="OFFICER_ID" Type="Int32" />
+    <Property Name="ACCOUNT_OFFICER" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DEAL_NO" Type="Int32" />
+    <Property Name="PFT_CY" Type="Int16" />
+    <Property Name="RELEASED_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_RELEASED" Type="DateTime" />
+    <Property Name="TO_BLOCK_DATE" Type="DateTime" />
+    <Property Name="TO_BLOCK_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="TO_RELEASE_DATE" Type="DateTime" />
+    <Property Name="TO_RELEASE_BY" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_APPLIED" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ZAKAT_APPLIED" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DEDUCT_ZAKAT_FR" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="RENEW_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTO_SWEEP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTO_SWEEP_MIN_BAL" Type="Decimal" Precision="20" Scale="6" />
+    <Property Name="INVST_BR" Type="Int16" />
+    <Property Name="INVST_CY" Type="Int16" />
+    <Property Name="INVST_GL" Type="Int32" />
+    <Property Name="INVST_CIF" Type="Int32" />
+    <Property Name="INVST_SL" Type="Int16" />
+    <Property Name="TRSFR_METHOD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_DATE_CALC_PCS" Type="DateTime" />
+    <Property Name="CANCEL_CHARGES" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PFT_BR" Type="Int16" />
+    <Property Name="TRF_BR" Type="Int16" />
+    <Property Name="OFF_BR" Type="Int16" />
+    <Property Name="SORT_CODE" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="ALLOW_ISS_CHQ" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ECO_SECTOR_CODE" Type="Int16" />
+    <Property Name="SUB_ECO_SECTOR_CODE" Type="Int16" />
+    <Property Name="FINAL_MATURITY_DATE" Type="DateTime" />
+    <Property Name="IBAN_ACC_NO" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="APPLY_PCS_CHARGES" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CONTRIBUTION_RATE" Type="Decimal" Precision="7" Scale="3" />
+    <Property Name="PCS_PARTICIPATION_FLAG" Type="Int32" />
+    <Property Name="ORIGIN_BR_I" Type="Int16" />
+    <Property Name="ORIGIN_BR_U" Type="Int16" />
+    <Property Name="ORIGIN_BR_D" Type="Int16" />
+    <Property Name="DEAL_PROVISION_CATEGORY" Type="Int16" />
+    <Property Name="DEAL_PROVISION_CATEGORY2" Type="Int16" />
+    <Property Name="DEAL_PROVISION_CATEGORY_USER" Type="Int16" />
+    <Property Name="DUE_DAYS" Type="Int32" />
+    <Property Name="PROV_PERCENTAGE_SYS" Type="Decimal" Precision="10" Scale="6" />
+    <Property Name="PROV_PERCENTAGE_SYS2" Type="Decimal" Precision="10" Scale="6" />
+    <Property Name="PROV_PERCENTAGE_USER" Type="Decimal" Precision="10" Scale="6" />
+    <Property Name="PROVISION_AMT" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="COLLATERAL_AMT" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="CLASS" Type="Int16" />
+    <Property Name="PROVISION_AMENDED_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DEAL_CLASSIFY_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FACILITY_NO" Type="Int32" />
+    <Property Name="FACILITY_BRANCH" Type="Int16" />
+    <Property Name="FACILITY_SUB_LIMIT" Type="Int16" />
+    <Property Name="LIBOR" Type="Decimal" Precision="11" Scale="6" />
+    <Property Name="MIN_RATE" Type="Decimal" Precision="11" Scale="6" />
+    <Property Name="MAX_RATE" Type="Decimal" Precision="11" Scale="6" />
+    <Property Name="PENALTY" Type="Decimal" Precision="11" Scale="6" />
+    <Property Name="LIMIT_EXP_DATE" Type="DateTime" />
+    <Property Name="CHARFES_FEES" Type="Int16" />
+    <Property Name="FMS_UPDATE_IND" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="OVERDRAFT_LIMIT" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="DRWDWN_NO" Type="Int32" />
+    <Property Name="PROVISION_CALC_AMT" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="OVERDRAFT_EXCEED_DATE" Type="DateTime" />
+    <Property Name="CON_BRIEF_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="JOINT_ACCOUNTS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LANGUAGE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MKT_BY_ID" Type="Int32" />
+    <Property Name="MKT_POSITION_BY" Type="Int16" />
+    <Property Name="MKT_DEPARTMENT_BY" Type="Int16" />
+    <Property Name="MKT_DIVISION_BY" Type="Int16" />
+    <Property Name="MKT_BY" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MKT_FOR_ID" Type="Int32" />
+    <Property Name="MKT_DEPARTMENT_FOR" Type="Int16" />
+    <Property Name="MKT_DIVISION_FOR" Type="Int16" />
+    <Property Name="MKT_FOR" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SPECIAL_RATE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CHARGES_FEES" Type="Int16" />
+    <Property Name="PERIODICITY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MIN_AMOUNT" Type="Decimal" Precision="20" Scale="6" />
+    <Property Name="MAX_AMOUNT" Type="Decimal" Precision="20" Scale="6" />
+    <Property Name="CHARGES_SCHEMA" Type="Int16" />
+    <Property Name="LAST_POST_DATE" Type="DateTime" />
+    <Property Name="CHQ_PAYM_SERIAL_NO" Type="Int32" />
+    <Property Name="STATUS_REASON" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SERIAL_NO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SEQ_NO" Type="Int32" />
+    <Property Name="LNK_BRANCH" Type="Int16" />
+    <Property Name="LNK_YEAR" Type="Int16" />
+    <Property Name="LNK_REFERENCE" Type="Int64" />
+    <Property Name="LNK_PRODUCT_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PREM_DED_PCS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MATURED_CALCULATION" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PCS_ARCHIVED_BAL_FC" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="PCS_ARCHIVED_BAL_CV" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="LAST_ZAKAT_DED_DATE" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="BIODATA">
+    <Key>
+      <PropertyRef Name="CUSTOMERID" />
+      <PropertyRef Name="BIOMETRICID" />
+    </Key>
+    <Property Name="SN" Type="Int32" Nullable="false" />
+    <Property Name="CUSTOMERID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="BIOMETRICID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ENTRYDATE" Type="DateTime" Nullable="false" />
+    <Property Name="BANKCODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="USERID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ENTRYMODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TICKETID" Type="Int32" />
+    <Property Name="PHONENO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BRANCH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ENROLLMENTOFFICER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ENROLLMENTIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REGISTRATIONDATE" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="ImalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AMFs" EntityType="Self.AMF" />
+    <EntitySet Name="BIODATAs" EntityType="Self.BIODATA" />
+    <FunctionImport Name="P_API_ACCOUNT_CREATION">
+      <Parameter Name="AL_CHANNEL_ID" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_USER_ID" Mode="In" Type="String" />
+      <Parameter Name="AS_MACHINE_NAME" Mode="In" Type="String" />
+      <Parameter Name="AL_API_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="ADT_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="AL_COMP_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_BRANCH_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_CURRENCY_CODE" Mode="In" Type="String" />
+      <Parameter Name="AL_GL_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_CIF_SUB_NO" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_TELLER_ID" Mode="In" Type="String" />
+      <Parameter Name="AS_RENEW" Mode="In" Type="String" />
+      <Parameter Name="AL_TRF_BR" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_TRF_CY" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_TRF_GL" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_TRF_CIF" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_TRF_SL" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_TRF_ADD_REF" Mode="In" Type="String" />
+      <Parameter Name="AS_PFT_POST_TO" Mode="In" Type="String" />
+      <Parameter Name="AL_PROFIT_BR" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_PROFIT_CY" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_PROFIT_GL" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_PROFIT_CIF" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_PROFIT_SL" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_PROFIT_ADD_REF" Mode="In" Type="String" />
+      <Parameter Name="AL_MATURITY_GL" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_EXT_TRF" Mode="In" Type="String" />
+      <Parameter Name="AL_OFF_BR" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_OFF_CY" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_OFF_GL" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_OFF_CIF" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_OFF_SL" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_OFF_ADD_REF" Mode="In" Type="String" />
+      <Parameter Name="AL_TRANSFER_AM" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_DEBIT_BRANCH" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_DEBIT_CURRENCY" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_DEBIT_GL_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_DEBIT_CIF_SUB_NO" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_DEBIT_SL" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_DEBIT_ADD_REF" Mode="In" Type="String" />
+      <Parameter Name="AS_REMARKS" Mode="In" Type="String" />
+      <Parameter Name="AL_DIV_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_DEPT_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_REFERENCE" Mode="In" Type="String" />
+      <Parameter Name="AL_POS" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_INST1" Mode="In" Type="String" />
+      <Parameter Name="AS_INST2" Mode="In" Type="String" />
+      <Parameter Name="AL_TRXTYPE" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_STATUS" Mode="In" Type="String" />
+      <Parameter Name="AS_CREATED_TRX" Mode="In" Type="String" />
+      <Parameter Name="OS_ADD_REF" Mode="Out" Type="String" />
+      <Parameter Name="OL_TRS_NO" Mode="Out" Type="Decimal" />
+      <Parameter Name="OL_POINT_RATE" Mode="Out" Type="Decimal" />
+      <Parameter Name="ODT_MATE_DATE" Mode="Out" Type="DateTime" />
+      <Parameter Name="OL_NEW_BAL" Mode="Out" Type="Decimal" />
+      <Parameter Name="OS_ACC_NAME" Mode="Out" Type="String" />
+      <Parameter Name="OL_ERROR_CODE" Mode="Out" Type="Decimal" />
+      <Parameter Name="OS_ERROR_DESC" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_API_CREATE_CIF">
+      <Parameter Name="AL_CHANNEL_ID" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_USER_ID" Mode="In" Type="String" />
+      <Parameter Name="AS_MACHINE_NAME" Mode="In" Type="String" />
+      <Parameter Name="AL_API_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_COMP_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_BRANCH_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_CIF_TYPE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ID_TYPE" Mode="In" Type="Decimal" />
+      <Parameter Name="ADT_ESTAB_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="AS_SHORT_NAME_ENG" Mode="In" Type="String" />
+      <Parameter Name="AS_SHORT_NAME_ARAB" Mode="In" Type="String" />
+      <Parameter Name="AS_LONG_NAME_ENG" Mode="In" Type="String" />
+      <Parameter Name="AS_LONG_NAME_ARAB" Mode="In" Type="String" />
+      <Parameter Name="AS_ID_NO" Mode="In" Type="String" />
+      <Parameter Name="AS_LANGUAGE" Mode="In" Type="String" />
+      <Parameter Name="AL_NATION_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_COUNTRY_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_PRIORITY_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_RESIDENT" Mode="In" Type="String" />
+      <Parameter Name="AL_CIVIL_CODE" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_CREATED_BY" Mode="In" Type="String" />
+      <Parameter Name="AL_DEPT" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_DIVISION" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ECO_SECTOR" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_FIRST_NAME_ENG" Mode="In" Type="String" />
+      <Parameter Name="AS_LAST_NAME_ENG" Mode="In" Type="String" />
+      <Parameter Name="AS_TEL" Mode="In" Type="String" />
+      <Parameter Name="AS_FIRST_NAME_ARAB" Mode="In" Type="String" />
+      <Parameter Name="AS_SEC_NAME_ARAB" Mode="In" Type="String" />
+      <Parameter Name="AS_LAST_NAME_ARAB" Mode="In" Type="String" />
+      <Parameter Name="AS_ADDRESS1_ENG" Mode="In" Type="String" />
+      <Parameter Name="AS_ADDRESS2_ENG" Mode="In" Type="String" />
+      <Parameter Name="AS_ADDRESS3_ENG" Mode="In" Type="String" />
+      <Parameter Name="AS_AUTH_ID" Mode="In" Type="String" />
+      <Parameter Name="AS_AUTH_NAME" Mode="In" Type="String" />
+      <Parameter Name="AS_SEC_NAME_ENG" Mode="In" Type="String" />
+      <Parameter Name="AS_REL_OFFICER" Mode="In" Type="String" />
+      <Parameter Name="ADT_DATE_CREATED" Mode="In" Type="DateTime" />
+      <Parameter Name="ADT_DATE_MODIFIED" Mode="In" Type="DateTime" />
+      <Parameter Name="AS_STATUS" Mode="In" Type="String" />
+      <Parameter Name="AS_TYPE" Mode="In" Type="String" />
+      <Parameter Name="AS_KYC_COMPLETED" Mode="In" Type="String" />
+      <Parameter Name="AS_MARITAL_STATUS" Mode="In" Type="String" />
+      <Parameter Name="AS_PC_IND" Mode="In" Type="String" />
+      <Parameter Name="AS_POPULATED" Mode="In" Type="String" />
+      <Parameter Name="AS_SHOW_SECRET_NO" Mode="In" Type="String" />
+      <Parameter Name="AL_REL_OFF_ID" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_MONTHLY_SALARY" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_SUB_ECO_SECTOR" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_SEXE" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_REF" Mode="In" Type="String" />
+      <Parameter Name="AS_BILL_FLAG" Mode="In" Type="String" />
+      <Parameter Name="AS_IND" Mode="In" Type="String" />
+      <Parameter Name="AL_TRX_TYPE" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_CY" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ACC_BR" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ACC_CY" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ACC_GL" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ACC_CIF" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ACC_SL" Mode="In" Type="Decimal" />
+      <Parameter Name="ADT_ADD_DATE1" Mode="In" Type="DateTime" />
+      <Parameter Name="ADT_ADD_DATE2" Mode="In" Type="DateTime" />
+      <Parameter Name="ADT_ADD_DATE3" Mode="In" Type="DateTime" />
+      <Parameter Name="ADT_ADD_DATE4" Mode="In" Type="DateTime" />
+      <Parameter Name="ADT_ADD_DATE5" Mode="In" Type="DateTime" />
+      <Parameter Name="AL_ADD_NUMBER1" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ADD_NUMBER2" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ADD_NUMBER3" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ADD_NUMBER4" Mode="In" Type="Decimal" />
+      <Parameter Name="AL_ADD_NUMBER5" Mode="In" Type="Decimal" />
+      <Parameter Name="AS_ADD_STRING1" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING2" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING3" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING4" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING5" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING6" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING7" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING8" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING9" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING10" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING11" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING12" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING13" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING14" Mode="In" Type="String" />
+      <Parameter Name="AS_ADD_STRING15" Mode="In" Type="String" />
+      <Parameter Name="OL_CIF_NO" Mode="Out" Type="Decimal" />
+      <Parameter Name="OL_ERROR_CODE" Mode="Out" Type="Decimal" />
+      <Parameter Name="OS_ERROR_DESC" Mode="Out" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

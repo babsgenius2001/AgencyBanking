@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JaizOpenDigitalBankingModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JaizOpenDigitalBanking.dbo.Bills' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Bills">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProviderRecognizedID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="ShortName" Type="nvarchar(max)" />
+    <Property Name="Narration" Type="nvarchar(max)" />
+    <Property Name="LogoUrl" Type="nvarchar(max)" />
+    <Property Name="Url" Type="nvarchar(max)" />
+    <Property Name="Surcharge" Type="nvarchar(max)" />
+    <Property Name="CustomSectionUrl" Type="nvarchar(max)" />
+    <Property Name="QuickTellerSiteUrlName" Type="nvarchar(max)" />
+    <Property Name="SupportEmail" Type="nvarchar(max)" />
+    <Property Name="CustomMessage" Type="nvarchar(max)" />
+    <Property Name="QuickTellerCategoryId" Type="int" Nullable="false" />
+    <Property Name="Visible" Type="bit" Nullable="false" />
+    <Property Name="CustomerFieldLabel" Type="nvarchar(max)" />
+    <Property Name="billerID" Type="int" />
+  </EntityType>
+  <EntityType Name="Bills2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProviderRecognizedID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="ShortName" Type="nvarchar(max)" />
+    <Property Name="Narration" Type="nvarchar(max)" />
+    <Property Name="LogoUrl" Type="nvarchar(max)" />
+    <Property Name="Url" Type="nvarchar(max)" />
+    <Property Name="Surcharge" Type="nvarchar(max)" />
+    <Property Name="CustomSectionUrl" Type="nvarchar(max)" />
+    <Property Name="QuickTellerSiteUrlName" Type="nvarchar(max)" />
+    <Property Name="SupportEmail" Type="nvarchar(max)" />
+    <Property Name="CustomMessage" Type="nvarchar(max)" />
+    <Property Name="QuickTellerCategoryId" Type="int" Nullable="false" />
+    <Property Name="Visible" Type="bit" Nullable="false" />
+    <Property Name="CustomerFieldLabel" Type="nvarchar(max)" />
+    <Property Name="billerID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JaizOpenDigitalBanking.dbo.Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProviderRecognizedItemId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ConsumerIdField" Type="nvarchar(max)" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="nvarchar(max)" />
+    <Property Name="ConvertedAmount" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+    <Property Name="BillID" Type="int" Nullable="false" />
+    <Property Name="IsAmountFixed" Type="bit" Nullable="false" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+    <Property Name="PictureId" Type="int" Nullable="false" />
+    <Property Name="PaymentCode" Type="nvarchar(max)" />
+    <Property Name="MiniAmount" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="MaxAmount" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="IsVisible" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Items2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProviderRecognizedItemId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ConsumerIdField" Type="nvarchar(max)" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="nvarchar(max)" />
+    <Property Name="ConvertedAmount" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+    <Property Name="BillID" Type="int" Nullable="false" />
+    <Property Name="IsAmountFixed" Type="bit" Nullable="false" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+    <Property Name="PictureId" Type="int" Nullable="false" />
+    <Property Name="PaymentCode" Type="nvarchar(max)" />
+    <Property Name="MiniAmount" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="MaxAmount" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="IsVisible" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="logID" />
+    </Key>
+    <Property Name="logID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="logDate" Type="datetime" Nullable="false" />
+    <Property Name="logIP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="logXML" Type="text" Nullable="false" />
+    <Property Name="logXMLOutDate" Type="datetime" />
+    <Property Name="logXMLOut" Type="text" />
+    <Property Name="methodName" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="otprequest">
+    <Key>
+      <PropertyRef Name="otpRequestID" />
+    </Key>
+    <Property Name="otpRequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="otpDate" Type="datetime" Nullable="false" />
+    <Property Name="otpPhone" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="otpAccountNo" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="otpExpiry" Type="datetime" Nullable="false" />
+    <Property Name="otp" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JaizOpenDigitalBanking.dbo.QuickTellerCategories' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="QuickTellerCategories">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="QuickTellerCategoryId" />
+      <PropertyRef Name="Visible" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuickTellerCategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Visible" Type="bit" Nullable="false" />
+    <Property Name="PictureUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="QuickTellerCategories2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuickTellerCategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Visible" Type="bit" Nullable="false" />
+    <Property Name="PictureUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBFIList">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIListDetailSN" Type="int" />
+    <Property Name="InstitutionCode" Type="varchar" MaxLength="6" />
+    <Property Name="InstitutionName" Type="varchar" MaxLength="200" />
+    <Property Name="Category" Type="varchar" MaxLength="5" />
+    <Property Name="LongInstitutionName" Type="varchar" MaxLength="200" />
+    <Property Name="OldInstitutionCode" Type="varchar" MaxLength="5" />
+    <Property Name="statusID" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransType">
+    <Key>
+      <PropertyRef Name="typeID" />
+    </Key>
+    <Property Name="typeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="typeAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="transType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="transName" Type="varchar" MaxLength="50" />
+    <Property Name="channelCode" Type="int" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="cipherphrase" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="vend">
+    <Key>
+      <PropertyRef Name="airtimeVendID" />
+    </Key>
+    <Property Name="airtimeVendID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="catID" Type="int" Nullable="false" />
+    <Property Name="serviceID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="airtimeVendName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vendingcat">
+    <Key>
+      <PropertyRef Name="vendingID" />
+    </Key>
+    <Property Name="vendingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vendName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="serviceID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="vendType" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JaizOpenDigitalBanking.dbo.CategoryBills' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CategoryBills">
+    <Key>
+      <PropertyRef Name="BillerID" />
+      <PropertyRef Name="BillerCategoryId" />
+    </Key>
+    <Property Name="BillerID" Type="int" Nullable="false" />
+    <Property Name="BillerName" Type="nvarchar(max)" />
+    <Property Name="BillerCategoryId" Type="int" Nullable="false" />
+    <Property Name="ReferenceDetails" Type="nvarchar(max)" />
+    <Property Name="BillerCategoryName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="JaizOpenDigitalBankingModel1StoreContainer">
+    <EntitySet Name="Bills2" EntityType="Self.Bills2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items2" EntityType="Self.Items2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="log" EntityType="Self.log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="otprequest" EntityType="Self.otprequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuickTellerCategories2" EntityType="Self.QuickTellerCategories2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBFIList" EntityType="Self.TBFIList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransType" EntityType="Self.TransType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vend" EntityType="Self.vend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vendingcat" EntityType="Self.vendingcat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bills" EntityType="Self.Bills" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Bills].[ID] AS [ID], 
+[Bills].[ProviderRecognizedID] AS [ProviderRecognizedID], 
+[Bills].[Name] AS [Name], 
+[Bills].[ShortName] AS [ShortName], 
+[Bills].[Narration] AS [Narration], 
+[Bills].[LogoUrl] AS [LogoUrl], 
+[Bills].[Url] AS [Url], 
+[Bills].[Surcharge] AS [Surcharge], 
+[Bills].[CustomSectionUrl] AS [CustomSectionUrl], 
+[Bills].[QuickTellerSiteUrlName] AS [QuickTellerSiteUrlName], 
+[Bills].[SupportEmail] AS [SupportEmail], 
+[Bills].[CustomMessage] AS [CustomMessage], 
+[Bills].[QuickTellerCategoryId] AS [QuickTellerCategoryId], 
+[Bills].[Visible] AS [Visible], 
+[Bills].[CustomerFieldLabel] AS [CustomerFieldLabel], 
+[Bills].[billerID] AS [billerID]
+FROM [dbo].[Bills] AS [Bills]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Items" EntityType="Self.Items" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Items].[ID] AS [ID], 
+[Items].[ProviderRecognizedItemId] AS [ProviderRecognizedItemId], 
+[Items].[Name] AS [Name], 
+[Items].[Description] AS [Description], 
+[Items].[ConsumerIdField] AS [ConsumerIdField], 
+[Items].[Code] AS [Code], 
+[Items].[Amount] AS [Amount], 
+[Items].[ConvertedAmount] AS [ConvertedAmount], 
+[Items].[BillID] AS [BillID], 
+[Items].[IsAmountFixed] AS [IsAmountFixed], 
+[Items].[SortOrder] AS [SortOrder], 
+[Items].[PictureId] AS [PictureId], 
+[Items].[PaymentCode] AS [PaymentCode], 
+[Items].[MiniAmount] AS [MiniAmount], 
+[Items].[MaxAmount] AS [MaxAmount], 
+[Items].[IsVisible] AS [IsVisible]
+FROM [dbo].[Items] AS [Items]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="QuickTellerCategories" EntityType="Self.QuickTellerCategories" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[QuickTellerCategories].[ID] AS [ID], 
+[QuickTellerCategories].[QuickTellerCategoryId] AS [QuickTellerCategoryId], 
+[QuickTellerCategories].[Name] AS [Name], 
+[QuickTellerCategories].[Description] AS [Description], 
+[QuickTellerCategories].[Visible] AS [Visible], 
+[QuickTellerCategories].[PictureUrl] AS [PictureUrl]
+FROM [dbo].[QuickTellerCategories] AS [QuickTellerCategories]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CategoryBills" EntityType="Self.CategoryBills" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[CategoryBills].[BillerID] AS [BillerID], 
+[CategoryBills].[BillerName] AS [BillerName], 
+[CategoryBills].[BillerCategoryId] AS [BillerCategoryId], 
+[CategoryBills].[ReferenceDetails] AS [ReferenceDetails], 
+[CategoryBills].[BillerCategoryName] AS [BillerCategoryName]
+FROM [dbo].[CategoryBills] AS [CategoryBills]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

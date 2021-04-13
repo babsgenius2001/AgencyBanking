@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JaizOpenDigitalBankingModel1StoreContainer" CdmEntityContainer="JaizOpenDigitalBankingEntities">
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.Bill">
+        <MappingFragment StoreEntitySet="Bills">
+          <ScalarProperty Name="billerID" ColumnName="billerID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProviderRecognizedID" ColumnName="ProviderRecognizedID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="LogoUrl" ColumnName="LogoUrl" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Surcharge" ColumnName="Surcharge" />
+          <ScalarProperty Name="CustomSectionUrl" ColumnName="CustomSectionUrl" />
+          <ScalarProperty Name="QuickTellerSiteUrlName" ColumnName="QuickTellerSiteUrlName" />
+          <ScalarProperty Name="SupportEmail" ColumnName="SupportEmail" />
+          <ScalarProperty Name="CustomMessage" ColumnName="CustomMessage" />
+          <ScalarProperty Name="QuickTellerCategoryId" ColumnName="QuickTellerCategoryId" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="CustomerFieldLabel" ColumnName="CustomerFieldLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bills2">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.Bills2">
+        <MappingFragment StoreEntitySet="Bills2">
+          <ScalarProperty Name="billerID" ColumnName="billerID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProviderRecognizedID" ColumnName="ProviderRecognizedID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="LogoUrl" ColumnName="LogoUrl" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Surcharge" ColumnName="Surcharge" />
+          <ScalarProperty Name="CustomSectionUrl" ColumnName="CustomSectionUrl" />
+          <ScalarProperty Name="QuickTellerSiteUrlName" ColumnName="QuickTellerSiteUrlName" />
+          <ScalarProperty Name="SupportEmail" ColumnName="SupportEmail" />
+          <ScalarProperty Name="CustomMessage" ColumnName="CustomMessage" />
+          <ScalarProperty Name="QuickTellerCategoryId" ColumnName="QuickTellerCategoryId" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="CustomerFieldLabel" ColumnName="CustomerFieldLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.Item">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProviderRecognizedItemId" ColumnName="ProviderRecognizedItemId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ConsumerIdField" ColumnName="ConsumerIdField" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ConvertedAmount" ColumnName="ConvertedAmount" />
+          <ScalarProperty Name="BillID" ColumnName="BillID" />
+          <ScalarProperty Name="IsAmountFixed" ColumnName="IsAmountFixed" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="PaymentCode" ColumnName="PaymentCode" />
+          <ScalarProperty Name="MiniAmount" ColumnName="MiniAmount" />
+          <ScalarProperty Name="MaxAmount" ColumnName="MaxAmount" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logs">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.log">
+        <MappingFragment StoreEntitySet="log">
+          <ScalarProperty Name="methodName" ColumnName="methodName" />
+          <ScalarProperty Name="logID" ColumnName="logID" />
+          <ScalarProperty Name="logDate" ColumnName="logDate" />
+          <ScalarProperty Name="logIP" ColumnName="logIP" />
+          <ScalarProperty Name="logXML" ColumnName="logXML" />
+          <ScalarProperty Name="logXMLOutDate" ColumnName="logXMLOutDate" />
+          <ScalarProperty Name="logXMLOut" ColumnName="logXMLOut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="otprequests">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.otprequest">
+        <MappingFragment StoreEntitySet="otprequest">
+          <ScalarProperty Name="otpRequestID" ColumnName="otpRequestID" />
+          <ScalarProperty Name="otpDate" ColumnName="otpDate" />
+          <ScalarProperty Name="otpPhone" ColumnName="otpPhone" />
+          <ScalarProperty Name="otpAccountNo" ColumnName="otpAccountNo" />
+          <ScalarProperty Name="otpExpiry" ColumnName="otpExpiry" />
+          <ScalarProperty Name="otp" ColumnName="otp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuickTellerCategories2">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.QuickTellerCategories2">
+        <MappingFragment StoreEntitySet="QuickTellerCategories2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QuickTellerCategoryId" ColumnName="QuickTellerCategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBFILists">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.TBFIList">
+        <MappingFragment StoreEntitySet="TBFIList">
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="FIListDetailSN" ColumnName="FIListDetailSN" />
+          <ScalarProperty Name="InstitutionCode" ColumnName="InstitutionCode" />
+          <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="LongInstitutionName" ColumnName="LongInstitutionName" />
+          <ScalarProperty Name="OldInstitutionCode" ColumnName="OldInstitutionCode" />
+          <ScalarProperty Name="statusID" ColumnName="statusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransTypes">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.TransType">
+        <MappingFragment StoreEntitySet="TransType">
+          <ScalarProperty Name="typeID" ColumnName="typeID" />
+          <ScalarProperty Name="typeAmount" ColumnName="typeAmount" />
+          <ScalarProperty Name="transType1" ColumnName="transType" />
+          <ScalarProperty Name="transName" ColumnName="transName" />
+          <ScalarProperty Name="channelCode" ColumnName="channelCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="cipherphrase" ColumnName="cipherphrase" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vends">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.vend">
+        <MappingFragment StoreEntitySet="vend">
+          <ScalarProperty Name="airtimeVendID" ColumnName="airtimeVendID" />
+          <ScalarProperty Name="catID" ColumnName="catID" />
+          <ScalarProperty Name="serviceID" ColumnName="serviceID" />
+          <ScalarProperty Name="airtimeVendName" ColumnName="airtimeVendName" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vendingcats">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.vendingcat">
+        <MappingFragment StoreEntitySet="vendingcat">
+          <ScalarProperty Name="vendingID" ColumnName="vendingID" />
+          <ScalarProperty Name="vendName" ColumnName="vendName" />
+          <ScalarProperty Name="serviceID" ColumnName="serviceID" />
+          <ScalarProperty Name="vendType" ColumnName="vendType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuickTellerCategories">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.QuickTellerCategory">
+        <MappingFragment StoreEntitySet="QuickTellerCategories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QuickTellerCategoryId" ColumnName="QuickTellerCategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryBills">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.CategoryBill">
+        <MappingFragment StoreEntitySet="CategoryBills">
+          <ScalarProperty Name="BillerID" ColumnName="BillerID" />
+          <ScalarProperty Name="BillerName" ColumnName="BillerName" />
+          <ScalarProperty Name="BillerCategoryId" ColumnName="BillerCategoryId" />
+          <ScalarProperty Name="ReferenceDetails" ColumnName="ReferenceDetails" />
+          <ScalarProperty Name="BillerCategoryName" ColumnName="BillerCategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items2">
+      <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.Items2">
+        <MappingFragment StoreEntitySet="Items2">
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="MaxAmount" ColumnName="MaxAmount" />
+          <ScalarProperty Name="MiniAmount" ColumnName="MiniAmount" />
+          <ScalarProperty Name="PaymentCode" ColumnName="PaymentCode" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IsAmountFixed" ColumnName="IsAmountFixed" />
+          <ScalarProperty Name="BillID" ColumnName="BillID" />
+          <ScalarProperty Name="ConvertedAmount" ColumnName="ConvertedAmount" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ConsumerIdField" ColumnName="ConsumerIdField" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProviderRecognizedItemId" ColumnName="ProviderRecognizedItemId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

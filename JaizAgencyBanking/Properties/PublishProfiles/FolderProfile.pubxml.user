@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\BA07190\Desktop\JaizOyaOya</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/08/2012 18:00:50</publishTime>
+    </File>
+    <File Include="bin/JaizAgencyBanking.dll">
+      <publishTime>03/26/2021 11:00:16</publishTime>
+    </File>
+    <File Include="bin/JaizAgencyBanking.pdb">
+      <publishTime>03/26/2021 11:00:16</publishTime>
+    </File>
+    <File Include="bin/JaizAgencyBanking.XmlSerializers.dll">
+      <publishTime>03/26/2021 11:00:18</publishTime>
+    </File>
+    <File Include="bin/LogUtility.dll">
+      <publishTime>09/06/2016 08:41:25</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/NLog.config">
+      <publishTime>01/08/2021 02:54:24</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>12/06/2020 19:11:06</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.dll">
+      <publishTime>05/26/2018 10:48:18</publishTime>
+    </File>
+    <File Include="bin/RestSharp.dll">
+      <publishTime>08/30/2012 22:22:50</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 04:02:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 04:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/28/2015 04:03:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>01/05/2021 15:51:54</publishTime>
+    </File>
+    <File Include="Content/bootstrap.js">
+      <publishTime>01/05/2021 15:51:54</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>01/05/2021 15:51:54</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.js">
+      <publishTime>01/05/2021 15:51:54</publishTime>
+    </File>
+    <File Include="Content/jquery-1.10.2.js">
+      <publishTime>01/05/2021 15:51:54</publishTime>
+    </File>
+    <File Include="Content/jquery-1.10.2.min.js">
+      <publishTime>01/05/2021 15:51:54</publishTime>
+    </File>
+    <File Include="Content/jquery-1.10.2.min.map">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Content/modernizr-2.6.2.js">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Content/respond.js">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Content/respond.min.js">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>01/05/2021 15:51:54</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Images/JaizLogo.png">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Models/ImalModel.edmx.diagram">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Models/JaizOpenModel.edmx.diagram">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Models/ODBModel.edmx.diagram">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Models/TestDBModel.edmx.diagram">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="NLog.config">
+      <publishTime>01/08/2021 02:54:24</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/08/2021 02:53:39</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/AccountTier.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/avg.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/BillPaymentAdviceResponse.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/BillResp.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/BLOCKEDAMOUNTDETAILS.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/BranchCodes.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/BVNResponse.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/CardFlag.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/CategoryResp.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/FIDetails.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/GetCustomerInfoByAccount.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/InternalGL.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/mycustomersearch.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/PaymentItemResp.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/Rootobject1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/SelectList.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/Signatory.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/StmtObj.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/TransactionStatusResponse.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/UsersDetailsResponse.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BillsPaymentService/ValidateCustomerResponse.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/BVNNibss/Reference.map">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/ADObjectResponse1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/BranchInfo1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/BVNInfo1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/CardInfo1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/CardResponse1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/ChqueLeaveResponse1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/ChqueResponse1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/CustomerInfo1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/EmailResponse1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/FIClasification1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/FIDetails1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/LoginResponse1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/Reference.map">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/RelationShipOfficerInfo1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/SmsResponse1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/StmtObj1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/InternetBankingAPI/TokenResponse1.datasource">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/JaizNIBSSOthers/Reference.map">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/NIBSSBVN/Reference.map">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web References/Quickteller/Reference.map">
+      <publishTime>01/05/2021 15:51:56</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/25/2021 18:53:58</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

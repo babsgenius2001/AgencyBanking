@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NIPIncomingModelStoreContainer" CdmEntityContainer="NIPIncomingEntities">
+    <EntitySetMapping Name="TBFILists">
+      <EntityTypeMapping TypeName="NIPIncomingModel.TBFIList">
+        <MappingFragment StoreEntitySet="TBFIList">
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="FIListDetailSN" ColumnName="FIListDetailSN" />
+          <ScalarProperty Name="InstitutionCode" ColumnName="InstitutionCode" />
+          <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="LongInstitutionName" ColumnName="LongInstitutionName" />
+          <ScalarProperty Name="OldInstitutionCode" ColumnName="OldInstitutionCode" />
+          <ScalarProperty Name="statusID" ColumnName="statusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
