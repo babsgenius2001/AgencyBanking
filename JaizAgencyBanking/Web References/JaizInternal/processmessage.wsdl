@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ActivateSuspendedAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateSuspendedAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActivateSuspendedAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSessionID">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSessionIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSessionIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuspendAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuspendAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuspendAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundTransferReversal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundTransferReversalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FundTransferReversalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogforReversal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogforReversalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogforReversalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fundtransfersingleitem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlinput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fundtransfersingleitemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fundtransfersingleitemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnblockAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnblockAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnblockAmountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlockAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlockAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BlockAmountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StopCheque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="chequeNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StopChequeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StopChequeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChequeLeaveStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="chequeNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChequeLeaveStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChequeLeaveStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ActivateSuspendedAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivateSuspendedAccount" />
+  </wsdl:message>
+  <wsdl:message name="ActivateSuspendedAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivateSuspendedAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSessionIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getSessionID" />
+  </wsdl:message>
+  <wsdl:message name="getSessionIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getSessionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuspendAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:SuspendAccount" />
+  </wsdl:message>
+  <wsdl:message name="SuspendAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:SuspendAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="FundTransferReversalSoapIn">
+    <wsdl:part name="parameters" element="tns:FundTransferReversal" />
+  </wsdl:message>
+  <wsdl:message name="FundTransferReversalSoapOut">
+    <wsdl:part name="parameters" element="tns:FundTransferReversalResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogforReversalSoapIn">
+    <wsdl:part name="parameters" element="tns:LogforReversal" />
+  </wsdl:message>
+  <wsdl:message name="LogforReversalSoapOut">
+    <wsdl:part name="parameters" element="tns:LogforReversalResponse" />
+  </wsdl:message>
+  <wsdl:message name="fundtransfersingleitemSoapIn">
+    <wsdl:part name="parameters" element="tns:fundtransfersingleitem" />
+  </wsdl:message>
+  <wsdl:message name="fundtransfersingleitemSoapOut">
+    <wsdl:part name="parameters" element="tns:fundtransfersingleitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnblockAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:UnblockAmount" />
+  </wsdl:message>
+  <wsdl:message name="UnblockAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:UnblockAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="BlockAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:BlockAmount" />
+  </wsdl:message>
+  <wsdl:message name="BlockAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:BlockAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="StopChequeSoapIn">
+    <wsdl:part name="parameters" element="tns:StopCheque" />
+  </wsdl:message>
+  <wsdl:message name="StopChequeSoapOut">
+    <wsdl:part name="parameters" element="tns:StopChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChequeLeaveStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ChequeLeaveStatus" />
+  </wsdl:message>
+  <wsdl:message name="ChequeLeaveStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ChequeLeaveStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="processmessageSoap">
+    <wsdl:operation name="ActivateSuspendedAccount">
+      <wsdl:input message="tns:ActivateSuspendedAccountSoapIn" />
+      <wsdl:output message="tns:ActivateSuspendedAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSessionID">
+      <wsdl:input message="tns:getSessionIDSoapIn" />
+      <wsdl:output message="tns:getSessionIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuspendAccount">
+      <wsdl:input message="tns:SuspendAccountSoapIn" />
+      <wsdl:output message="tns:SuspendAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferReversal">
+      <wsdl:input message="tns:FundTransferReversalSoapIn" />
+      <wsdl:output message="tns:FundTransferReversalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogforReversal">
+      <wsdl:input message="tns:LogforReversalSoapIn" />
+      <wsdl:output message="tns:LogforReversalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fundtransfersingleitem">
+      <wsdl:input message="tns:fundtransfersingleitemSoapIn" />
+      <wsdl:output message="tns:fundtransfersingleitemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnblockAmount">
+      <wsdl:input message="tns:UnblockAmountSoapIn" />
+      <wsdl:output message="tns:UnblockAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockAmount">
+      <wsdl:input message="tns:BlockAmountSoapIn" />
+      <wsdl:output message="tns:BlockAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StopCheque">
+      <wsdl:input message="tns:StopChequeSoapIn" />
+      <wsdl:output message="tns:StopChequeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChequeLeaveStatus">
+      <wsdl:input message="tns:ChequeLeaveStatusSoapIn" />
+      <wsdl:output message="tns:ChequeLeaveStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="processmessageSoap" type="tns:processmessageSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ActivateSuspendedAccount">
+      <soap:operation soapAction="http://tempuri.org/ActivateSuspendedAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSessionID">
+      <soap:operation soapAction="http://tempuri.org/getSessionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendAccount">
+      <soap:operation soapAction="http://tempuri.org/SuspendAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferReversal">
+      <soap:operation soapAction="http://tempuri.org/FundTransferReversal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogforReversal">
+      <soap:operation soapAction="http://tempuri.org/LogforReversal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fundtransfersingleitem">
+      <soap:operation soapAction="http://tempuri.org/fundtransfersingleitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnblockAmount">
+      <soap:operation soapAction="http://tempuri.org/UnblockAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockAmount">
+      <soap:operation soapAction="http://tempuri.org/BlockAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopCheque">
+      <soap:operation soapAction="http://tempuri.org/StopCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChequeLeaveStatus">
+      <soap:operation soapAction="http://tempuri.org/ChequeLeaveStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="processmessageSoap12" type="tns:processmessageSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ActivateSuspendedAccount">
+      <soap12:operation soapAction="http://tempuri.org/ActivateSuspendedAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSessionID">
+      <soap12:operation soapAction="http://tempuri.org/getSessionID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendAccount">
+      <soap12:operation soapAction="http://tempuri.org/SuspendAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferReversal">
+      <soap12:operation soapAction="http://tempuri.org/FundTransferReversal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogforReversal">
+      <soap12:operation soapAction="http://tempuri.org/LogforReversal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fundtransfersingleitem">
+      <soap12:operation soapAction="http://tempuri.org/fundtransfersingleitem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnblockAmount">
+      <soap12:operation soapAction="http://tempuri.org/UnblockAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockAmount">
+      <soap12:operation soapAction="http://tempuri.org/BlockAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopCheque">
+      <soap12:operation soapAction="http://tempuri.org/StopCheque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChequeLeaveStatus">
+      <soap12:operation soapAction="http://tempuri.org/ChequeLeaveStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="processmessage">
+    <wsdl:port name="processmessageSoap" binding="tns:processmessageSoap">
+      <soap:address location="http://172.13.21.63:8000/JaizInternal/processmessage.asmx" />
+    </wsdl:port>
+    <wsdl:port name="processmessageSoap12" binding="tns:processmessageSoap12">
+      <soap12:address location="http://172.13.21.63:8000/JaizInternal/processmessage.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

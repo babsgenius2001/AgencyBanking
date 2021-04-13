@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd2" filename="JaizHelper.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd0" filename="JaizHelper0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.13.21.160:8013/JaizInternetBankingAPI/JaizHelper.svc?wsdl" filename="JaizHelper.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd3" filename="JaizHelper1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd1" filename="JaizHelper2.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

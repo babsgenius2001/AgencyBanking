@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="JaizAgencyBanking.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="JaizOpenDigitalBanking_NIBSSBVN_BVNValidation" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.18.192.100/bvn/bvnValidation</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_NIBSS_processmessage" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.13.21.63/JaizNIBSSInterfaceSSM/processmessage.asmx</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_Quickteller_QuickTellerService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://orion.interswitchng.com/quicktellerservice/QuickTeller.svc</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_BVNNibss_BVNValidationWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.234.10.104:8080/bvnV/bvnV</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_JaizNIBSSInterface_processmessage" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.13.21.63:8000/JaizNIBSSInterface/processmessage.asmx</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_JaizInternal_processmessage" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.13.21.63:8000/JaizInternal/processmessage.asmx</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_NewNIP_processmessage" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.13.21.63:8000/JaizNIBSSInterface/processmessage.asmx</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_InzternetBankingAPI_JaizHelper" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_JaizNIBSSOthers_processmessage" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.13.21.63:8000/JaizNIBSSOthers/processmessage.asmx</Value>
+    </Setting>
+    <Setting Name="JaizOpenDigitalBanking_BillsPaymentService_JaizHelper" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.13.21.160:8013/JaizService/Controllers/JaizHelper.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

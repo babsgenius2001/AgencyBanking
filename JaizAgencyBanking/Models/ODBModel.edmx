@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JaizOpenDigitalBankingModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'JaizOpenDigitalBanking.dbo.Bills' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Bills">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProviderRecognizedID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="ShortName" Type="nvarchar(max)" />
+          <Property Name="Narration" Type="nvarchar(max)" />
+          <Property Name="LogoUrl" Type="nvarchar(max)" />
+          <Property Name="Url" Type="nvarchar(max)" />
+          <Property Name="Surcharge" Type="nvarchar(max)" />
+          <Property Name="CustomSectionUrl" Type="nvarchar(max)" />
+          <Property Name="QuickTellerSiteUrlName" Type="nvarchar(max)" />
+          <Property Name="SupportEmail" Type="nvarchar(max)" />
+          <Property Name="CustomMessage" Type="nvarchar(max)" />
+          <Property Name="QuickTellerCategoryId" Type="int" Nullable="false" />
+          <Property Name="Visible" Type="bit" Nullable="false" />
+          <Property Name="CustomerFieldLabel" Type="nvarchar(max)" />
+          <Property Name="billerID" Type="int" />
+        </EntityType>
+        <EntityType Name="Bills2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProviderRecognizedID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="ShortName" Type="nvarchar(max)" />
+          <Property Name="Narration" Type="nvarchar(max)" />
+          <Property Name="LogoUrl" Type="nvarchar(max)" />
+          <Property Name="Url" Type="nvarchar(max)" />
+          <Property Name="Surcharge" Type="nvarchar(max)" />
+          <Property Name="CustomSectionUrl" Type="nvarchar(max)" />
+          <Property Name="QuickTellerSiteUrlName" Type="nvarchar(max)" />
+          <Property Name="SupportEmail" Type="nvarchar(max)" />
+          <Property Name="CustomMessage" Type="nvarchar(max)" />
+          <Property Name="QuickTellerCategoryId" Type="int" Nullable="false" />
+          <Property Name="Visible" Type="bit" Nullable="false" />
+          <Property Name="CustomerFieldLabel" Type="nvarchar(max)" />
+          <Property Name="billerID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'JaizOpenDigitalBanking.dbo.Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProviderRecognizedItemId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ConsumerIdField" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="nvarchar(max)" />
+          <Property Name="ConvertedAmount" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+          <Property Name="BillID" Type="int" Nullable="false" />
+          <Property Name="IsAmountFixed" Type="bit" Nullable="false" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="PictureId" Type="int" Nullable="false" />
+          <Property Name="PaymentCode" Type="nvarchar(max)" />
+          <Property Name="MiniAmount" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="MaxAmount" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Items2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProviderRecognizedItemId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ConsumerIdField" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="nvarchar(max)" />
+          <Property Name="ConvertedAmount" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+          <Property Name="BillID" Type="int" Nullable="false" />
+          <Property Name="IsAmountFixed" Type="bit" Nullable="false" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="PictureId" Type="int" Nullable="false" />
+          <Property Name="PaymentCode" Type="nvarchar(max)" />
+          <Property Name="MiniAmount" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="MaxAmount" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="logID" />
+          </Key>
+          <Property Name="logID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="logDate" Type="datetime" Nullable="false" />
+          <Property Name="logIP" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="logXML" Type="text" Nullable="false" />
+          <Property Name="logXMLOutDate" Type="datetime" />
+          <Property Name="logXMLOut" Type="text" />
+          <Property Name="methodName" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="otprequest">
+          <Key>
+            <PropertyRef Name="otpRequestID" />
+          </Key>
+          <Property Name="otpRequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="otpDate" Type="datetime" Nullable="false" />
+          <Property Name="otpPhone" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="otpAccountNo" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="otpExpiry" Type="datetime" Nullable="false" />
+          <Property Name="otp" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'JaizOpenDigitalBanking.dbo.QuickTellerCategories' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="QuickTellerCategories">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="QuickTellerCategoryId" />
+            <PropertyRef Name="Visible" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QuickTellerCategoryId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Visible" Type="bit" Nullable="false" />
+          <Property Name="PictureUrl" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="QuickTellerCategories2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QuickTellerCategoryId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Visible" Type="bit" Nullable="false" />
+          <Property Name="PictureUrl" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TBFIList">
+          <Key>
+            <PropertyRef Name="SN" />
+          </Key>
+          <Property Name="SN" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIListDetailSN" Type="int" />
+          <Property Name="InstitutionCode" Type="varchar" MaxLength="6" />
+          <Property Name="InstitutionName" Type="varchar" MaxLength="200" />
+          <Property Name="Category" Type="varchar" MaxLength="5" />
+          <Property Name="LongInstitutionName" Type="varchar" MaxLength="200" />
+          <Property Name="OldInstitutionCode" Type="varchar" MaxLength="5" />
+          <Property Name="statusID" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransType">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="typeAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="transType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="transName" Type="varchar" MaxLength="50" />
+          <Property Name="channelCode" Type="int" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="cipherphrase" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="vend">
+          <Key>
+            <PropertyRef Name="airtimeVendID" />
+          </Key>
+          <Property Name="airtimeVendID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="catID" Type="int" Nullable="false" />
+          <Property Name="serviceID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="airtimeVendName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vendingcat">
+          <Key>
+            <PropertyRef Name="vendingID" />
+          </Key>
+          <Property Name="vendingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vendName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="serviceID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="vendType" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'JaizOpenDigitalBanking.dbo.CategoryBills' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CategoryBills">
+          <Key>
+            <PropertyRef Name="BillerID" />
+            <PropertyRef Name="BillerCategoryId" />
+          </Key>
+          <Property Name="BillerID" Type="int" Nullable="false" />
+          <Property Name="BillerName" Type="nvarchar(max)" />
+          <Property Name="BillerCategoryId" Type="int" Nullable="false" />
+          <Property Name="ReferenceDetails" Type="nvarchar(max)" />
+          <Property Name="BillerCategoryName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="JaizOpenDigitalBankingModel1StoreContainer">
+          <EntitySet Name="Bills2" EntityType="Self.Bills2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items2" EntityType="Self.Items2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="log" EntityType="Self.log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="otprequest" EntityType="Self.otprequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuickTellerCategories2" EntityType="Self.QuickTellerCategories2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBFIList" EntityType="Self.TBFIList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransType" EntityType="Self.TransType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vend" EntityType="Self.vend" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vendingcat" EntityType="Self.vendingcat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bills" EntityType="Self.Bills" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Bills].[ID] AS [ID], 
+[Bills].[ProviderRecognizedID] AS [ProviderRecognizedID], 
+[Bills].[Name] AS [Name], 
+[Bills].[ShortName] AS [ShortName], 
+[Bills].[Narration] AS [Narration], 
+[Bills].[LogoUrl] AS [LogoUrl], 
+[Bills].[Url] AS [Url], 
+[Bills].[Surcharge] AS [Surcharge], 
+[Bills].[CustomSectionUrl] AS [CustomSectionUrl], 
+[Bills].[QuickTellerSiteUrlName] AS [QuickTellerSiteUrlName], 
+[Bills].[SupportEmail] AS [SupportEmail], 
+[Bills].[CustomMessage] AS [CustomMessage], 
+[Bills].[QuickTellerCategoryId] AS [QuickTellerCategoryId], 
+[Bills].[Visible] AS [Visible], 
+[Bills].[CustomerFieldLabel] AS [CustomerFieldLabel], 
+[Bills].[billerID] AS [billerID]
+FROM [dbo].[Bills] AS [Bills]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Items" EntityType="Self.Items" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Items].[ID] AS [ID], 
+[Items].[ProviderRecognizedItemId] AS [ProviderRecognizedItemId], 
+[Items].[Name] AS [Name], 
+[Items].[Description] AS [Description], 
+[Items].[ConsumerIdField] AS [ConsumerIdField], 
+[Items].[Code] AS [Code], 
+[Items].[Amount] AS [Amount], 
+[Items].[ConvertedAmount] AS [ConvertedAmount], 
+[Items].[BillID] AS [BillID], 
+[Items].[IsAmountFixed] AS [IsAmountFixed], 
+[Items].[SortOrder] AS [SortOrder], 
+[Items].[PictureId] AS [PictureId], 
+[Items].[PaymentCode] AS [PaymentCode], 
+[Items].[MiniAmount] AS [MiniAmount], 
+[Items].[MaxAmount] AS [MaxAmount], 
+[Items].[IsVisible] AS [IsVisible]
+FROM [dbo].[Items] AS [Items]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="QuickTellerCategories" EntityType="Self.QuickTellerCategories" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[QuickTellerCategories].[ID] AS [ID], 
+[QuickTellerCategories].[QuickTellerCategoryId] AS [QuickTellerCategoryId], 
+[QuickTellerCategories].[Name] AS [Name], 
+[QuickTellerCategories].[Description] AS [Description], 
+[QuickTellerCategories].[Visible] AS [Visible], 
+[QuickTellerCategories].[PictureUrl] AS [PictureUrl]
+FROM [dbo].[QuickTellerCategories] AS [QuickTellerCategories]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CategoryBills" EntityType="Self.CategoryBills" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[CategoryBills].[BillerID] AS [BillerID], 
+[CategoryBills].[BillerName] AS [BillerName], 
+[CategoryBills].[BillerCategoryId] AS [BillerCategoryId], 
+[CategoryBills].[ReferenceDetails] AS [ReferenceDetails], 
+[CategoryBills].[BillerCategoryName] AS [BillerCategoryName]
+FROM [dbo].[CategoryBills] AS [CategoryBills]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JaizOpenDigitalBankingModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProviderRecognizedID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShortName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Narration" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LogoUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Surcharge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomSectionUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuickTellerSiteUrlName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupportEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuickTellerCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Visible" Type="Boolean" Nullable="false" />
+          <Property Name="CustomerFieldLabel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billerID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Bills2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProviderRecognizedID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShortName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Narration" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LogoUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Surcharge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomSectionUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuickTellerSiteUrlName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupportEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuickTellerCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Visible" Type="Boolean" Nullable="false" />
+          <Property Name="CustomerFieldLabel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="billerID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProviderRecognizedItemId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConsumerIdField" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConvertedAmount" Type="Decimal" Precision="18" Scale="8" Nullable="false" />
+          <Property Name="BillID" Type="Int32" Nullable="false" />
+          <Property Name="IsAmountFixed" Type="Boolean" Nullable="false" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <Property Name="PictureId" Type="Int32" Nullable="false" />
+          <Property Name="PaymentCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiniAmount" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="MaxAmount" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="logID" />
+          </Key>
+          <Property Name="logID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="logDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="logIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="logXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="logXMLOutDate" Type="DateTime" Precision="3" />
+          <Property Name="logXMLOut" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="methodName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="otprequest">
+          <Key>
+            <PropertyRef Name="otpRequestID" />
+          </Key>
+          <Property Name="otpRequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="otpDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="otpPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="otpAccountNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="otpExpiry" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="otp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuickTellerCategories2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuickTellerCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Visible" Type="Boolean" Nullable="false" />
+          <Property Name="PictureUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBFIList">
+          <Key>
+            <PropertyRef Name="SN" />
+          </Key>
+          <Property Name="SN" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIListDetailSN" Type="Int32" />
+          <Property Name="InstitutionCode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="InstitutionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="LongInstitutionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="OldInstitutionCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="statusID" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransType">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="typeAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="transType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="transName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="channelCode" Type="Int32" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cipherphrase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vend">
+          <Key>
+            <PropertyRef Name="airtimeVendID" />
+          </Key>
+          <Property Name="airtimeVendID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="catID" Type="Int32" Nullable="false" />
+          <Property Name="serviceID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="airtimeVendName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vendingcat">
+          <Key>
+            <PropertyRef Name="vendingID" />
+          </Key>
+          <Property Name="vendingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vendName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="serviceID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="vendType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="QuickTellerCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="QuickTellerCategoryId" />
+            <PropertyRef Name="Visible" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuickTellerCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Visible" Type="Boolean" Nullable="false" />
+          <Property Name="PictureUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CategoryBill">
+          <Key>
+            <PropertyRef Name="BillerID" />
+            <PropertyRef Name="BillerCategoryId" />
+          </Key>
+          <Property Name="BillerID" Type="Int32" Nullable="false" />
+          <Property Name="BillerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BillerCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="ReferenceDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BillerCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="JaizOpenDigitalBankingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bills" EntityType="Self.Bill" />
+          <EntitySet Name="Bills2" EntityType="Self.Bills2" />
+          <EntitySet Name="Items" EntityType="Self.Item" />
+          <EntitySet Name="logs" EntityType="Self.log" />
+          <EntitySet Name="otprequests" EntityType="Self.otprequest" />
+          <EntitySet Name="QuickTellerCategories2" EntityType="Self.QuickTellerCategories2" />
+          <EntitySet Name="TBFILists" EntityType="Self.TBFIList" />
+          <EntitySet Name="TransTypes" EntityType="Self.TransType" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="vends" EntityType="Self.vend" />
+          <EntitySet Name="vendingcats" EntityType="Self.vendingcat" />
+          <EntitySet Name="QuickTellerCategories" EntityType="Self.QuickTellerCategory" />
+          <EntitySet Name="CategoryBills" EntityType="Self.CategoryBill" />
+          <EntitySet Name="Items2" EntityType="JaizOpenDigitalBankingModel1.Items2" />
+        </EntityContainer>
+        <EntityType Name="Items2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProviderRecognizedItemId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConsumerIdField" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConvertedAmount" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+          <Property Name="BillID" Type="Int32" Nullable="false" />
+          <Property Name="IsAmountFixed" Type="Boolean" Nullable="false" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <Property Name="PictureId" Type="Int32" Nullable="false" />
+          <Property Name="PaymentCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiniAmount" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="MaxAmount" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JaizOpenDigitalBankingModel1StoreContainer" CdmEntityContainer="JaizOpenDigitalBankingEntities">
+          <EntitySetMapping Name="Bills">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.Bill">
+              <MappingFragment StoreEntitySet="Bills">
+                <ScalarProperty Name="billerID" ColumnName="billerID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProviderRecognizedID" ColumnName="ProviderRecognizedID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="Narration" ColumnName="Narration" />
+                <ScalarProperty Name="LogoUrl" ColumnName="LogoUrl" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Surcharge" ColumnName="Surcharge" />
+                <ScalarProperty Name="CustomSectionUrl" ColumnName="CustomSectionUrl" />
+                <ScalarProperty Name="QuickTellerSiteUrlName" ColumnName="QuickTellerSiteUrlName" />
+                <ScalarProperty Name="SupportEmail" ColumnName="SupportEmail" />
+                <ScalarProperty Name="CustomMessage" ColumnName="CustomMessage" />
+                <ScalarProperty Name="QuickTellerCategoryId" ColumnName="QuickTellerCategoryId" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="CustomerFieldLabel" ColumnName="CustomerFieldLabel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bills2">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.Bills2">
+              <MappingFragment StoreEntitySet="Bills2">
+                <ScalarProperty Name="billerID" ColumnName="billerID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProviderRecognizedID" ColumnName="ProviderRecognizedID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="Narration" ColumnName="Narration" />
+                <ScalarProperty Name="LogoUrl" ColumnName="LogoUrl" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Surcharge" ColumnName="Surcharge" />
+                <ScalarProperty Name="CustomSectionUrl" ColumnName="CustomSectionUrl" />
+                <ScalarProperty Name="QuickTellerSiteUrlName" ColumnName="QuickTellerSiteUrlName" />
+                <ScalarProperty Name="SupportEmail" ColumnName="SupportEmail" />
+                <ScalarProperty Name="CustomMessage" ColumnName="CustomMessage" />
+                <ScalarProperty Name="QuickTellerCategoryId" ColumnName="QuickTellerCategoryId" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="CustomerFieldLabel" ColumnName="CustomerFieldLabel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProviderRecognizedItemId" ColumnName="ProviderRecognizedItemId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ConsumerIdField" ColumnName="ConsumerIdField" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ConvertedAmount" ColumnName="ConvertedAmount" />
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="IsAmountFixed" ColumnName="IsAmountFixed" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+                <ScalarProperty Name="PaymentCode" ColumnName="PaymentCode" />
+                <ScalarProperty Name="MiniAmount" ColumnName="MiniAmount" />
+                <ScalarProperty Name="MaxAmount" ColumnName="MaxAmount" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logs">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.log">
+              <MappingFragment StoreEntitySet="log">
+                <ScalarProperty Name="methodName" ColumnName="methodName" />
+                <ScalarProperty Name="logID" ColumnName="logID" />
+                <ScalarProperty Name="logDate" ColumnName="logDate" />
+                <ScalarProperty Name="logIP" ColumnName="logIP" />
+                <ScalarProperty Name="logXML" ColumnName="logXML" />
+                <ScalarProperty Name="logXMLOutDate" ColumnName="logXMLOutDate" />
+                <ScalarProperty Name="logXMLOut" ColumnName="logXMLOut" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="otprequests">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.otprequest">
+              <MappingFragment StoreEntitySet="otprequest">
+                <ScalarProperty Name="otpRequestID" ColumnName="otpRequestID" />
+                <ScalarProperty Name="otpDate" ColumnName="otpDate" />
+                <ScalarProperty Name="otpPhone" ColumnName="otpPhone" />
+                <ScalarProperty Name="otpAccountNo" ColumnName="otpAccountNo" />
+                <ScalarProperty Name="otpExpiry" ColumnName="otpExpiry" />
+                <ScalarProperty Name="otp" ColumnName="otp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuickTellerCategories2">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.QuickTellerCategories2">
+              <MappingFragment StoreEntitySet="QuickTellerCategories2">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="QuickTellerCategoryId" ColumnName="QuickTellerCategoryId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBFILists">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.TBFIList">
+              <MappingFragment StoreEntitySet="TBFIList">
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="FIListDetailSN" ColumnName="FIListDetailSN" />
+                <ScalarProperty Name="InstitutionCode" ColumnName="InstitutionCode" />
+                <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="LongInstitutionName" ColumnName="LongInstitutionName" />
+                <ScalarProperty Name="OldInstitutionCode" ColumnName="OldInstitutionCode" />
+                <ScalarProperty Name="statusID" ColumnName="statusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransTypes">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.TransType">
+              <MappingFragment StoreEntitySet="TransType">
+                <ScalarProperty Name="typeID" ColumnName="typeID" />
+                <ScalarProperty Name="typeAmount" ColumnName="typeAmount" />
+                <ScalarProperty Name="transType1" ColumnName="transType" />
+                <ScalarProperty Name="transName" ColumnName="transName" />
+                <ScalarProperty Name="channelCode" ColumnName="channelCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="cipherphrase" ColumnName="cipherphrase" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vends">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.vend">
+              <MappingFragment StoreEntitySet="vend">
+                <ScalarProperty Name="airtimeVendID" ColumnName="airtimeVendID" />
+                <ScalarProperty Name="catID" ColumnName="catID" />
+                <ScalarProperty Name="serviceID" ColumnName="serviceID" />
+                <ScalarProperty Name="airtimeVendName" ColumnName="airtimeVendName" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vendingcats">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.vendingcat">
+              <MappingFragment StoreEntitySet="vendingcat">
+                <ScalarProperty Name="vendingID" ColumnName="vendingID" />
+                <ScalarProperty Name="vendName" ColumnName="vendName" />
+                <ScalarProperty Name="serviceID" ColumnName="serviceID" />
+                <ScalarProperty Name="vendType" ColumnName="vendType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuickTellerCategories">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.QuickTellerCategory">
+              <MappingFragment StoreEntitySet="QuickTellerCategories">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="QuickTellerCategoryId" ColumnName="QuickTellerCategoryId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoryBills">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.CategoryBill">
+              <MappingFragment StoreEntitySet="CategoryBills">
+                <ScalarProperty Name="BillerID" ColumnName="BillerID" />
+                <ScalarProperty Name="BillerName" ColumnName="BillerName" />
+                <ScalarProperty Name="BillerCategoryId" ColumnName="BillerCategoryId" />
+                <ScalarProperty Name="ReferenceDetails" ColumnName="ReferenceDetails" />
+                <ScalarProperty Name="BillerCategoryName" ColumnName="BillerCategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items2">
+            <EntityTypeMapping TypeName="JaizOpenDigitalBankingModel1.Items2">
+              <MappingFragment StoreEntitySet="Items2">
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="MaxAmount" ColumnName="MaxAmount" />
+                <ScalarProperty Name="MiniAmount" ColumnName="MiniAmount" />
+                <ScalarProperty Name="PaymentCode" ColumnName="PaymentCode" />
+                <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="IsAmountFixed" ColumnName="IsAmountFixed" />
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="ConvertedAmount" ColumnName="ConvertedAmount" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ConsumerIdField" ColumnName="ConsumerIdField" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProviderRecognizedItemId" ColumnName="ProviderRecognizedItemId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

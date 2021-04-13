@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JaizHelper" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JaizInternetBankingApi" />
+      <xsd:import schemaLocation="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JaizInternetBankingApi.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJaizHelper_getCharges_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCharges" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_getCharges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getChargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_FundTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FundTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_FundTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FundTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_FundTransferReversal_InputMessage">
+    <wsdl:part name="parameters" element="tns:FundTransferReversal" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_FundTransferReversal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FundTransferReversalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_FundTransferStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FundTransferStatus" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_FundTransferStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FundTransferStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_nameenquirysingleitem_InputMessage">
+    <wsdl:part name="parameters" element="tns:nameenquirysingleitem" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_nameenquirysingleitem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nameenquirysingleitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_fundtransfersingleitem_dc_InputMessage">
+    <wsdl:part name="parameters" element="tns:fundtransfersingleitem_dc" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_fundtransfersingleitem_dc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fundtransfersingleitem_dcResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_txnstatusquerysingleitem_InputMessage">
+    <wsdl:part name="parameters" element="tns:txnstatusquerysingleitem" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_txnstatusquerysingleitem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:txnstatusquerysingleitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerInfoByAccountNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInfoByAccountNo" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerInfoByAccountNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInfoByAccountNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerInfoListByAccountNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInfoListByAccountNo" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerInfoListByAccountNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInfoListByAccountNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerInfoListByCif_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInfoListByCif" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerInfoListByCif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInfoListByCifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_ValidateADUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateADUser" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_ValidateADUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateADUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_ValidateToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateToken" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_ValidateToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_UnlockToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockToken" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_UnlockToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_SendSmsViaHelper_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSmsViaHelper" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_SendSmsViaHelper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSmsViaHelperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_SendEmailViaHelper_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailViaHelper" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_SendEmailViaHelper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailViaHelperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_ConfirmCheque_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmCheque" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_ConfirmCheque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GenerateStatement_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateStatement" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GenerateStatement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerFinanceInfoListByCif_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerFinanceInfoListByCif" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerFinanceInfoListByCif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerFinanceInfoListByCifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerInvestmentInfoListByCif_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInvestmentInfoListByCif" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCustomerInvestmentInfoListByCif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerInvestmentInfoListByCifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetFIClassificationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFIClassificationList" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetFIClassificationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFIClassificationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetFIDetailsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFIDetailsList" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetFIDetailsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFIDetailsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetRelationShipOfficerInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelationShipOfficerInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetRelationShipOfficerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelationShipOfficerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_SearchADUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchADUser" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_SearchADUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchADUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetBranchList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchList" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetBranchList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_ChequeLeaveStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChequeLeaveStatus" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_ChequeLeaveStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChequeLeaveStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_StopCheque_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopCheque" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_StopCheque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCardInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCardInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_GetCardInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCardInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_BlockCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:BlockCard" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_BlockCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BlockCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_linkBVN_InputMessage">
+    <wsdl:part name="parameters" element="tns:linkBVN" />
+  </wsdl:message>
+  <wsdl:message name="IJaizHelper_linkBVN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:linkBVNResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJaizHelper">
+    <wsdl:operation name="getCharges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/getCharges" message="tns:IJaizHelper_getCharges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/getChargesResponse" message="tns:IJaizHelper_getCharges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FundTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/FundTransfer" message="tns:IJaizHelper_FundTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/FundTransferResponse" message="tns:IJaizHelper_FundTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferReversal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/FundTransferReversal" message="tns:IJaizHelper_FundTransferReversal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/FundTransferReversalResponse" message="tns:IJaizHelper_FundTransferReversal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/FundTransferStatus" message="tns:IJaizHelper_FundTransferStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/FundTransferStatusResponse" message="tns:IJaizHelper_FundTransferStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nameenquirysingleitem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/nameenquirysingleitem" message="tns:IJaizHelper_nameenquirysingleitem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/nameenquirysingleitemResponse" message="tns:IJaizHelper_nameenquirysingleitem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fundtransfersingleitem_dc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/fundtransfersingleitem_dc" message="tns:IJaizHelper_fundtransfersingleitem_dc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/fundtransfersingleitem_dcResponse" message="tns:IJaizHelper_fundtransfersingleitem_dc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="txnstatusquerysingleitem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/txnstatusquerysingleitem" message="tns:IJaizHelper_txnstatusquerysingleitem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/txnstatusquerysingleitemResponse" message="tns:IJaizHelper_txnstatusquerysingleitem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfoByAccountNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerInfoByAccountNo" message="tns:IJaizHelper_GetCustomerInfoByAccountNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerInfoByAccountNoResponse" message="tns:IJaizHelper_GetCustomerInfoByAccountNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfoListByAccountNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerInfoListByAccountNo" message="tns:IJaizHelper_GetCustomerInfoListByAccountNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerInfoListByAccountNoResponse" message="tns:IJaizHelper_GetCustomerInfoListByAccountNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfoListByCif">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerInfoListByCif" message="tns:IJaizHelper_GetCustomerInfoListByCif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerInfoListByCifResponse" message="tns:IJaizHelper_GetCustomerInfoListByCif_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateADUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/ValidateADUser" message="tns:IJaizHelper_ValidateADUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/ValidateADUserResponse" message="tns:IJaizHelper_ValidateADUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/ValidateToken" message="tns:IJaizHelper_ValidateToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/ValidateTokenResponse" message="tns:IJaizHelper_ValidateToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/UnlockToken" message="tns:IJaizHelper_UnlockToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/UnlockTokenResponse" message="tns:IJaizHelper_UnlockToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSmsViaHelper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/SendSmsViaHelper" message="tns:IJaizHelper_SendSmsViaHelper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/SendSmsViaHelperResponse" message="tns:IJaizHelper_SendSmsViaHelper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailViaHelper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/SendEmailViaHelper" message="tns:IJaizHelper_SendEmailViaHelper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/SendEmailViaHelperResponse" message="tns:IJaizHelper_SendEmailViaHelper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCheque">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/ConfirmCheque" message="tns:IJaizHelper_ConfirmCheque_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/ConfirmChequeResponse" message="tns:IJaizHelper_ConfirmCheque_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateStatement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GenerateStatement" message="tns:IJaizHelper_GenerateStatement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GenerateStatementResponse" message="tns:IJaizHelper_GenerateStatement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFinanceInfoListByCif">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerFinanceInfoListByCif" message="tns:IJaizHelper_GetCustomerFinanceInfoListByCif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerFinanceInfoListByCifResponse" message="tns:IJaizHelper_GetCustomerFinanceInfoListByCif_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInvestmentInfoListByCif">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerInvestmentInfoListByCif" message="tns:IJaizHelper_GetCustomerInvestmentInfoListByCif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetCustomerInvestmentInfoListByCifResponse" message="tns:IJaizHelper_GetCustomerInvestmentInfoListByCif_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFIClassificationList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetFIClassificationList" message="tns:IJaizHelper_GetFIClassificationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetFIClassificationListResponse" message="tns:IJaizHelper_GetFIClassificationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFIDetailsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetFIDetailsList" message="tns:IJaizHelper_GetFIDetailsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetFIDetailsListResponse" message="tns:IJaizHelper_GetFIDetailsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelationShipOfficerInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetRelationShipOfficerInfo" message="tns:IJaizHelper_GetRelationShipOfficerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetRelationShipOfficerInfoResponse" message="tns:IJaizHelper_GetRelationShipOfficerInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchADUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/SearchADUser" message="tns:IJaizHelper_SearchADUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/SearchADUserResponse" message="tns:IJaizHelper_SearchADUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetBranchList" message="tns:IJaizHelper_GetBranchList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetBranchListResponse" message="tns:IJaizHelper_GetBranchList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChequeLeaveStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/ChequeLeaveStatus" message="tns:IJaizHelper_ChequeLeaveStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/ChequeLeaveStatusResponse" message="tns:IJaizHelper_ChequeLeaveStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopCheque">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/StopCheque" message="tns:IJaizHelper_StopCheque_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/StopChequeResponse" message="tns:IJaizHelper_StopCheque_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/GetCardInfo" message="tns:IJaizHelper_GetCardInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/GetCardInfoResponse" message="tns:IJaizHelper_GetCardInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/BlockCard" message="tns:IJaizHelper_BlockCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/BlockCardResponse" message="tns:IJaizHelper_BlockCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="linkBVN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJaizHelper/linkBVN" message="tns:IJaizHelper_linkBVN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJaizHelper/linkBVNResponse" message="tns:IJaizHelper_linkBVN_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IJaizHelper" type="tns:IJaizHelper">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCharges">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/getCharges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransfer">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/FundTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferReversal">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/FundTransferReversal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferStatus">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/FundTransferStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nameenquirysingleitem">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/nameenquirysingleitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fundtransfersingleitem_dc">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/fundtransfersingleitem_dc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="txnstatusquerysingleitem">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/txnstatusquerysingleitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfoByAccountNo">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetCustomerInfoByAccountNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfoListByAccountNo">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetCustomerInfoListByAccountNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInfoListByCif">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetCustomerInfoListByCif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateADUser">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/ValidateADUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateToken">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/ValidateToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockToken">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/UnlockToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSmsViaHelper">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/SendSmsViaHelper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailViaHelper">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/SendEmailViaHelper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCheque">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/ConfirmCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateStatement">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GenerateStatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFinanceInfoListByCif">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetCustomerFinanceInfoListByCif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInvestmentInfoListByCif">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetCustomerInvestmentInfoListByCif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFIClassificationList">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetFIClassificationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFIDetailsList">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetFIDetailsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelationShipOfficerInfo">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetRelationShipOfficerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchADUser">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/SearchADUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchList">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetBranchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChequeLeaveStatus">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/ChequeLeaveStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopCheque">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/StopCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardInfo">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/GetCardInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockCard">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/BlockCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="linkBVN">
+      <soap:operation soapAction="http://tempuri.org/IJaizHelper/linkBVN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JaizHelper">
+    <wsdl:port name="BasicHttpBinding_IJaizHelper" binding="tns:BasicHttpBinding_IJaizHelper">
+      <soap:address location="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

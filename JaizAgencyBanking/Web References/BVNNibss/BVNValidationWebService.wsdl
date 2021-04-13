@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://validation.bvn.nibss.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="BVNValidationWebService" targetNamespace="http://validation.bvn.nibss.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://validation.bvn.nibss.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="verifyMultipleBVNs" type="tns:verifyMultipleBVNs" />
+      <xs:element name="verifyMultipleBVNsResponse" type="tns:verifyMultipleBVNsResponse" />
+      <xs:element name="verifySingleBVN" type="tns:verifySingleBVN" />
+      <xs:element name="verifySingleBVNResponse" type="tns:verifySingleBVNResponse" />
+      <xs:complexType name="verifySingleBVN">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BVN" type="xs:string" />
+          <xs:element minOccurs="0" name="organisationCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="verifySingleBVNResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="searchResult" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="verifyMultipleBVNs">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BVNs" type="xs:string" />
+          <xs:element minOccurs="0" name="organisationCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="verifyMultipleBVNsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="searchResults" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception" />
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Exception">
+    <wsdl:part name="Exception" element="tns:Exception" />
+  </wsdl:message>
+  <wsdl:message name="verifyMultipleBVNsResponse">
+    <wsdl:part name="parameters" element="tns:verifyMultipleBVNsResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifySingleBVN">
+    <wsdl:part name="parameters" element="tns:verifySingleBVN" />
+  </wsdl:message>
+  <wsdl:message name="verifySingleBVNResponse">
+    <wsdl:part name="parameters" element="tns:verifySingleBVNResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyMultipleBVNs">
+    <wsdl:part name="parameters" element="tns:verifyMultipleBVNs" />
+  </wsdl:message>
+  <wsdl:portType name="IBVNValidationService">
+    <wsdl:operation name="verifySingleBVN">
+      <wsdl:input name="verifySingleBVN" message="tns:verifySingleBVN" />
+      <wsdl:output name="verifySingleBVNResponse" message="tns:verifySingleBVNResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyMultipleBVNs">
+      <wsdl:input name="verifyMultipleBVNs" message="tns:verifyMultipleBVNs" />
+      <wsdl:output name="verifyMultipleBVNsResponse" message="tns:verifyMultipleBVNsResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BVNValidationWebServiceSoapBinding" type="tns:IBVNValidationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="verifySingleBVN">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="verifySingleBVN">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verifySingleBVNResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="verifyMultipleBVNs">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="verifyMultipleBVNs">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verifyMultipleBVNsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BVNValidationWebService">
+    <wsdl:port name="BVNValidationWebServicePort" binding="tns:BVNValidationWebServiceSoapBinding">
+      <soap:address location="http://192.234.10.104:8080/bvnV/bvnV" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

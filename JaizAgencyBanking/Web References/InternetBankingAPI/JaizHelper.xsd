@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JaizInternetBankingApi" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JaizInternetBankingApi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.13.21.160:8013/JaizInternetBankingApi/JaizHelper.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="CustomerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BVN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerAccountBalance" type="xs:double" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaturityDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationShipOfficer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationShipOfficerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerInfo" nillable="true" type="tns:CustomerInfo" />
+  <xs:complexType name="ArrayOfCustomerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerInfo" nillable="true" type="tns:CustomerInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerInfo" nillable="true" type="tns:ArrayOfCustomerInfo" />
+  <xs:complexType name="LoginObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginObject" nillable="true" type="tns:LoginObject" />
+  <xs:simpleType name="LoginResponse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESSFUL" />
+      <xs:enumeration value="NOT_SUCCESSFUL" />
+      <xs:enumeration value="INVALID_PARAMETERS" />
+      <xs:enumeration value="UNKNOW_ERROR" />
+      <xs:enumeration value="SERVICE_DOWN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LoginResponse" nillable="true" type="tns:LoginResponse" />
+  <xs:complexType name="TokenObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OTP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TokenID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TokenObject" nillable="true" type="tns:TokenObject" />
+  <xs:simpleType name="TokenResponse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESSFUL" />
+      <xs:enumeration value="CODE_REPLAY_ATTEMPT" />
+      <xs:enumeration value="CODE_NOT_VERIFIED" />
+      <xs:enumeration value="TOKEN_RECORD_NOTFOUND" />
+      <xs:enumeration value="IDENTIFICATION_ERROR_THRESHHOLD_REACHED" />
+      <xs:enumeration value="UNKNOWN_ERROR" />
+      <xs:enumeration value="SERVICE_DOWN" />
+      <xs:enumeration value="INVALID_PARAMETERS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TokenResponse" nillable="true" type="tns:TokenResponse" />
+  <xs:complexType name="SmsObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SmsContent" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SmsObject" nillable="true" type="tns:SmsObject" />
+  <xs:simpleType name="SmsResponse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESSFUL" />
+      <xs:enumeration value="NOT_SUCCESSFUL" />
+      <xs:enumeration value="MESSAGE_TOO_LONG" />
+      <xs:enumeration value="UNKNOW_ERROR" />
+      <xs:enumeration value="EMPTY_OBJECT" />
+      <xs:enumeration value="INVALID_MOBILENO" />
+      <xs:enumeration value="INVALID_INDENTIFIER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SmsResponse" nillable="true" type="tns:SmsResponse" />
+  <xs:complexType name="EmailObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attachment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasAttachment" type="xs:int" />
+      <xs:element minOccurs="0" name="SenderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailObject" nillable="true" type="tns:EmailObject" />
+  <xs:simpleType name="EmailResponse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESSFUL" />
+      <xs:enumeration value="NOT_SUCCESSFUL" />
+      <xs:enumeration value="INVALID_MESSAGE" />
+      <xs:enumeration value="UNKNOW_ERROR" />
+      <xs:enumeration value="EMPTY_OBJECT" />
+      <xs:enumeration value="INVALID_EMAILADDRESS" />
+      <xs:enumeration value="INVALID_INDENTIFIER" />
+      <xs:enumeration value="INVALID_ATTACHMENT" />
+      <xs:enumeration value="INVALID_FROMADDRESS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EmailResponse" nillable="true" type="tns:EmailResponse" />
+  <xs:complexType name="ChequeHelper">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beneficiary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChequeNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChequeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdentificationMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InitiationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InitiatorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstrumentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SecurityNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChequeHelper" nillable="true" type="tns:ChequeHelper" />
+  <xs:simpleType name="ChqueResponse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESSFUL" />
+      <xs:enumeration value="INVALID_CHEQUE_NUMBER">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALID_SECURITY_NUMBER">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALID_ID_MODE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALID_CHEQUE_TYPE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NO_ROW_AFFECTED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UNKNOWN_ERROR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALID_PARAMETERS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SERVICE_DOWN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChqueResponse" nillable="true" type="tns:ChqueResponse" />
+  <xs:complexType name="ArrayOfFIClasification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FIClasification" nillable="true" type="tns:FIClasification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFIClasification" nillable="true" type="tns:ArrayOfFIClasification" />
+  <xs:complexType name="FIClasification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FIClasification" nillable="true" type="tns:FIClasification" />
+  <xs:complexType name="ArrayOfFIDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FIDetails" nillable="true" type="tns:FIDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFIDetails" nillable="true" type="tns:ArrayOfFIDetails" />
+  <xs:complexType name="FIDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="InstitutionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstitutionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FIDetails" nillable="true" type="tns:FIDetails" />
+  <xs:complexType name="RelationShipOfficerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RelationShipOfficerInfo" nillable="true" type="tns:RelationShipOfficerInfo" />
+  <xs:complexType name="ADObjectResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ADObjectResponse" nillable="true" type="tns:ADObjectResponse" />
+  <xs:complexType name="ArrayOfBranchInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BranchInfo" nillable="true" type="tns:BranchInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBranchInfo" nillable="true" type="tns:ArrayOfBranchInfo" />
+  <xs:complexType name="BranchInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BranchInfo" nillable="true" type="tns:BranchInfo" />
+  <xs:complexType name="ChequeLeaveObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="chequeNumber" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChequeLeaveObject" nillable="true" type="tns:ChequeLeaveObject" />
+  <xs:simpleType name="ChqueLeaveResponse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ACTIVE" />
+      <xs:enumeration value="NOT_ACTIVE" />
+      <xs:enumeration value="STOPPED" />
+      <xs:enumeration value="INVALID_CHEQUE_NUMBER" />
+      <xs:enumeration value="UNKNOWN_ERROR" />
+      <xs:enumeration value="INVALID_PARAMETERS" />
+      <xs:enumeration value="RECORD_NOTFOUND" />
+      <xs:enumeration value="SERVICE_DOWN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChqueLeaveResponse" nillable="true" type="tns:ChqueLeaveResponse" />
+  <xs:complexType name="ArrayOfCardInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CardInfo" nillable="true" type="tns:CardInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCardInfo" nillable="true" type="tns:ArrayOfCardInfo" />
+  <xs:complexType name="CardInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardInfo" nillable="true" type="tns:CardInfo" />
+  <xs:simpleType name="CardResponse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESSFUL" />
+      <xs:enumeration value="NO_RECORD_FOUND" />
+      <xs:enumeration value="UNKNOWN_ERROR" />
+      <xs:enumeration value="SERVICE_DOWN" />
+      <xs:enumeration value="INVALID_PARAMETERS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CardResponse" nillable="true" type="tns:CardResponse" />
+  <xs:complexType name="BVNRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BVN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CIF" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BVNRequest" nillable="true" type="tns:BVNRequest" />
+  <xs:complexType name="BVNInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Jaiz" nillable="true" type="tns:BVNDetails" />
+      <xs:element minOccurs="0" name="NIBSS" nillable="true" type="tns:BVNDetails" />
+      <xs:element minOccurs="0" name="Response" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BVNInfo" nillable="true" type="tns:BVNInfo" />
+  <xs:complexType name="BVNDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BVNDetails" nillable="true" type="tns:BVNDetails" />
+</xs:schema>

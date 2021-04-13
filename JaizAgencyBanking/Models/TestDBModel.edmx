@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NIPIncomingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBFIList">
+          <Key>
+            <PropertyRef Name="SN" />
+          </Key>
+          <Property Name="SN" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIListDetailSN" Type="int" />
+          <Property Name="InstitutionCode" Type="varchar" MaxLength="6" />
+          <Property Name="InstitutionName" Type="varchar" MaxLength="200" />
+          <Property Name="Category" Type="varchar" MaxLength="5" />
+          <Property Name="LongInstitutionName" Type="varchar" MaxLength="200" />
+          <Property Name="OldInstitutionCode" Type="varchar" MaxLength="5" />
+          <Property Name="statusID" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="NIPIncomingModelStoreContainer">
+          <EntitySet Name="TBFIList" EntityType="Self.TBFIList" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NIPIncomingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBFIList">
+          <Key>
+            <PropertyRef Name="SN" />
+          </Key>
+          <Property Name="SN" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIListDetailSN" Type="Int32" />
+          <Property Name="InstitutionCode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="InstitutionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="LongInstitutionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="OldInstitutionCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="statusID" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="NIPIncomingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBFILists" EntityType="Self.TBFIList" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NIPIncomingModelStoreContainer" CdmEntityContainer="NIPIncomingEntities">
+          <EntitySetMapping Name="TBFILists">
+            <EntityTypeMapping TypeName="NIPIncomingModel.TBFIList">
+              <MappingFragment StoreEntitySet="TBFIList">
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="FIListDetailSN" ColumnName="FIListDetailSN" />
+                <ScalarProperty Name="InstitutionCode" ColumnName="InstitutionCode" />
+                <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="LongInstitutionName" ColumnName="LongInstitutionName" />
+                <ScalarProperty Name="OldInstitutionCode" ColumnName="OldInstitutionCode" />
+                <ScalarProperty Name="statusID" ColumnName="statusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

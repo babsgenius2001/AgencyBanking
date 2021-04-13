@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.interswitchng.com/quicktellerservice/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QuickTellerService" targetNamespace="http://services.interswitchng.com/quicktellerservice/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://services.interswitchng.com/quicktellerservice/">
+      <xsd:element name="CreateUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="CreateUserResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ActivateUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ActivateUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="ActivateUserResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="UpdateUserResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangePassword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangePasswordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="ChangePasswordResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ResetPassword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ResetPasswordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="ResetPasswordResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthenticateUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthenticateUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="AuthenticateUserResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthenticateUserSecurityToken">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthenticateUserSecurityTokenResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="AuthenticateUserSecurityTokenResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetUserResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBillers">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBillersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetBillersResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetLatestBillers">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetLatestBillersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetLatestBillersResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFeaturedBillers">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFeaturedBillersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetFeaturedBillersResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBillerPaymentItems">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBillerPaymentItemsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetBillerPaymentItemsResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBillerCategories">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBillerCategoriesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetBillerCategoriesResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DoBillPaymentInquiry">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DoBillPaymentInquiryResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="DoBillPaymentInquiryResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthenticateCustomer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthenticateCustomerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="AuthenticateCustomerResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendBillPaymentAdvice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendBillPaymentAdviceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="SendBillPaymentAdviceResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendPayments">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendPaymentsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="SendPaymentsResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddCustomerBillerAccount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddCustomerBillerAccountResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="AddCustomerBillerAccountResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCustomerBillerAccounts">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCustomerBillerAccountsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetCustomerBillerAccountsResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCustomerPayments">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCustomerPaymentsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetCustomerPaymentsResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddBillerCustomer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddBillerCustomerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="AddBillerCustomerResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCollectionsAccount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCollectionsAccountResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetCollectionsAccountResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBillersCollectionsAccount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBillersCollectionsAccountResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetBillersCollectionsAccountResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EditCustomerBillerAccount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EditCustomerBillerAccountResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="EditCustomerBillerAccountResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ResendActivationToken">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ResendActivationTokenResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="ResendActivationTokenResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DoCustomProcessing">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DoCustomProcessingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="DoCustomProcessingResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateBiller">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateBillerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="CreateBillerResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VerifyBiller">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VerifyBillerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="VerifyBillerResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ValidateCustomer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ValidateCustomerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="ValidateCustomerResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DoTransfer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DoTransferResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="DoTransferResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CancelTransfer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CancelTransferResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="CancelTransferResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendSessionKey">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendSessionKeyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="SendSessionKeyResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="QueryTransfer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="QueryTransferResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="QueryTransferResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthoriseCashOut">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthoriseCashOutResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="AuthoriseCashOutResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthoriseAccountCashOut">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthoriseAccountCashOutResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="AuthoriseAccountCashOutResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReverseCashOut">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReverseCashOutResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="ReverseCashOutResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="StatusCheck">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="StatusCheckResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="StatusCheckResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="QueryTransaction">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="QueryTransactionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="QueryTransactionResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSystemSettings">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="xmlParams" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSystemSettingsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetSystemSettingsResult" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="QuickTellerService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ActivateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateUser" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ActivateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthenticateUserSecurityToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthenticateUserSecurityToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserSecurityTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetBillers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillers" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetBillers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillersResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetLatestBillers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestBillers" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetLatestBillers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestBillersResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetFeaturedBillers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeaturedBillers" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetFeaturedBillers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeaturedBillersResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetBillerPaymentItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillerPaymentItems" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetBillerPaymentItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillerPaymentItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetBillerCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillerCategories" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetBillerCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillerCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_DoBillPaymentInquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoBillPaymentInquiry" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_DoBillPaymentInquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoBillPaymentInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthenticateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthenticateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_SendBillPaymentAdvice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendBillPaymentAdvice" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_SendBillPaymentAdvice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendBillPaymentAdviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_SendPayments_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPayments" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_SendPayments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendPaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AddCustomerBillerAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerBillerAccount" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AddCustomerBillerAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerBillerAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetCustomerBillerAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerBillerAccounts" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetCustomerBillerAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerBillerAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetCustomerPayments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerPayments" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetCustomerPayments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerPaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AddBillerCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBillerCustomer" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AddBillerCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBillerCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetCollectionsAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollectionsAccount" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetCollectionsAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollectionsAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetBillersCollectionsAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillersCollectionsAccount" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetBillersCollectionsAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillersCollectionsAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_EditCustomerBillerAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditCustomerBillerAccount" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_EditCustomerBillerAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditCustomerBillerAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ResendActivationToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResendActivationToken" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ResendActivationToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResendActivationTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_DoCustomProcessing_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoCustomProcessing" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_DoCustomProcessing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoCustomProcessingResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_CreateBiller_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBiller" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_CreateBiller_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBillerResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_VerifyBiller_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyBiller" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_VerifyBiller_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyBillerResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ValidateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ValidateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_DoTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoTransfer" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_DoTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_CancelTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTransfer" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_CancelTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_SendSessionKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSessionKey" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_SendSessionKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSessionKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_QueryTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTransfer" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_QueryTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthoriseCashOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthoriseCashOut" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthoriseCashOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthoriseCashOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthoriseAccountCashOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthoriseAccountCashOut" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_AuthoriseAccountCashOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthoriseAccountCashOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ReverseCashOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseCashOut" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_ReverseCashOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseCashOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_StatusCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:StatusCheck" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_StatusCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StatusCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_QueryTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTransaction" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_QueryTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetSystemSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemSettings" />
+  </wsdl:message>
+  <wsdl:message name="QuickTellerService_GetSystemSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemSettingsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="QuickTellerService">
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="CreateUser" message="tns:QuickTellerService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/CreateUserResponse" message="tns:QuickTellerService_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateUser">
+      <wsdl:input wsaw:Action="ActivateUser" message="tns:QuickTellerService_ActivateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/ActivateUserResponse" message="tns:QuickTellerService_ActivateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="UpdateUser" message="tns:QuickTellerService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/UpdateUserResponse" message="tns:QuickTellerService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="ChangePassword" message="tns:QuickTellerService_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/ChangePasswordResponse" message="tns:QuickTellerService_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input wsaw:Action="ResetPassword" message="tns:QuickTellerService_ResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/ResetPasswordResponse" message="tns:QuickTellerService_ResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="AuthenticateUser" message="tns:QuickTellerService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/AuthenticateUserResponse" message="tns:QuickTellerService_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUserSecurityToken">
+      <wsdl:input wsaw:Action="AuthenticateUserSecurityToken" message="tns:QuickTellerService_AuthenticateUserSecurityToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/AuthenticateUserSecurityTokenResponse" message="tns:QuickTellerService_AuthenticateUserSecurityToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="GetUser" message="tns:QuickTellerService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetUserResponse" message="tns:QuickTellerService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillers">
+      <wsdl:input wsaw:Action="GetBillers" message="tns:QuickTellerService_GetBillers_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetBillersResponse" message="tns:QuickTellerService_GetBillers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestBillers">
+      <wsdl:input wsaw:Action="GetLatestBillers" message="tns:QuickTellerService_GetLatestBillers_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetLatestBillersResponse" message="tns:QuickTellerService_GetLatestBillers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeaturedBillers">
+      <wsdl:input wsaw:Action="GetFeaturedBillers" message="tns:QuickTellerService_GetFeaturedBillers_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetFeaturedBillersResponse" message="tns:QuickTellerService_GetFeaturedBillers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillerPaymentItems">
+      <wsdl:input wsaw:Action="GetBillerPaymentItems" message="tns:QuickTellerService_GetBillerPaymentItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetBillerPaymentItemsResponse" message="tns:QuickTellerService_GetBillerPaymentItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillerCategories">
+      <wsdl:input wsaw:Action="GetBillerCategories" message="tns:QuickTellerService_GetBillerCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetBillerCategoriesResponse" message="tns:QuickTellerService_GetBillerCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoBillPaymentInquiry">
+      <wsdl:input wsaw:Action="DoBillPaymentInquiry" message="tns:QuickTellerService_DoBillPaymentInquiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/DoBillPaymentInquiryResponse" message="tns:QuickTellerService_DoBillPaymentInquiry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateCustomer">
+      <wsdl:input wsaw:Action="AuthenticateCustomer" message="tns:QuickTellerService_AuthenticateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/AuthenticateCustomerResponse" message="tns:QuickTellerService_AuthenticateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBillPaymentAdvice">
+      <wsdl:input wsaw:Action="SendBillPaymentAdvice" message="tns:QuickTellerService_SendBillPaymentAdvice_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/SendBillPaymentAdviceResponse" message="tns:QuickTellerService_SendBillPaymentAdvice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPayments">
+      <wsdl:input wsaw:Action="SendPayments" message="tns:QuickTellerService_SendPayments_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/SendPaymentsResponse" message="tns:QuickTellerService_SendPayments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerBillerAccount">
+      <wsdl:input wsaw:Action="AddCustomerBillerAccount" message="tns:QuickTellerService_AddCustomerBillerAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/AddCustomerBillerAccountResponse" message="tns:QuickTellerService_AddCustomerBillerAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBillerAccounts">
+      <wsdl:input wsaw:Action="GetCustomerBillerAccounts" message="tns:QuickTellerService_GetCustomerBillerAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetCustomerBillerAccountsResponse" message="tns:QuickTellerService_GetCustomerBillerAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPayments">
+      <wsdl:input wsaw:Action="GetCustomerPayments" message="tns:QuickTellerService_GetCustomerPayments_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetCustomerPaymentsResponse" message="tns:QuickTellerService_GetCustomerPayments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBillerCustomer">
+      <wsdl:input wsaw:Action="AddBillerCustomer" message="tns:QuickTellerService_AddBillerCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/AddBillerCustomerResponse" message="tns:QuickTellerService_AddBillerCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectionsAccount">
+      <wsdl:input wsaw:Action="GetCollectionsAccount" message="tns:QuickTellerService_GetCollectionsAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetCollectionsAccountResponse" message="tns:QuickTellerService_GetCollectionsAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillersCollectionsAccount">
+      <wsdl:input wsaw:Action="GetBillersCollectionsAccount" message="tns:QuickTellerService_GetBillersCollectionsAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetBillersCollectionsAccountResponse" message="tns:QuickTellerService_GetBillersCollectionsAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCustomerBillerAccount">
+      <wsdl:input wsaw:Action="EditCustomerBillerAccount" message="tns:QuickTellerService_EditCustomerBillerAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/EditCustomerBillerAccountResponse" message="tns:QuickTellerService_EditCustomerBillerAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResendActivationToken">
+      <wsdl:input wsaw:Action="ResendActivationToken" message="tns:QuickTellerService_ResendActivationToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/ResendActivationTokenResponse" message="tns:QuickTellerService_ResendActivationToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoCustomProcessing">
+      <wsdl:input wsaw:Action="DoCustomProcessing" message="tns:QuickTellerService_DoCustomProcessing_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/DoCustomProcessingResponse" message="tns:QuickTellerService_DoCustomProcessing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBiller">
+      <wsdl:input wsaw:Action="CreateBiller" message="tns:QuickTellerService_CreateBiller_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/CreateBillerResponse" message="tns:QuickTellerService_CreateBiller_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyBiller">
+      <wsdl:input wsaw:Action="VerifyBiller" message="tns:QuickTellerService_VerifyBiller_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/VerifyBillerResponse" message="tns:QuickTellerService_VerifyBiller_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCustomer">
+      <wsdl:input wsaw:Action="ValidateCustomer" message="tns:QuickTellerService_ValidateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/ValidateCustomerResponse" message="tns:QuickTellerService_ValidateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoTransfer">
+      <wsdl:input wsaw:Action="DoTransfer" message="tns:QuickTellerService_DoTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/DoTransferResponse" message="tns:QuickTellerService_DoTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTransfer">
+      <wsdl:input wsaw:Action="CancelTransfer" message="tns:QuickTellerService_CancelTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/CancelTransferResponse" message="tns:QuickTellerService_CancelTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSessionKey">
+      <wsdl:input wsaw:Action="SendSessionKey" message="tns:QuickTellerService_SendSessionKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/SendSessionKeyResponse" message="tns:QuickTellerService_SendSessionKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransfer">
+      <wsdl:input wsaw:Action="QueryTransfer" message="tns:QuickTellerService_QueryTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/QueryTransferResponse" message="tns:QuickTellerService_QueryTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseCashOut">
+      <wsdl:input wsaw:Action="AuthoriseCashOut" message="tns:QuickTellerService_AuthoriseCashOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/AuthoriseCashOutResponse" message="tns:QuickTellerService_AuthoriseCashOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseAccountCashOut">
+      <wsdl:input wsaw:Action="AuthoriseAccountCashOut" message="tns:QuickTellerService_AuthoriseAccountCashOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/AuthoriseAccountCashOutResponse" message="tns:QuickTellerService_AuthoriseAccountCashOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReverseCashOut">
+      <wsdl:input wsaw:Action="ReverseCashOut" message="tns:QuickTellerService_ReverseCashOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/ReverseCashOutResponse" message="tns:QuickTellerService_ReverseCashOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusCheck">
+      <wsdl:input wsaw:Action="StatusCheck" message="tns:QuickTellerService_StatusCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/StatusCheckResponse" message="tns:QuickTellerService_StatusCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransaction">
+      <wsdl:input wsaw:Action="QueryTransaction" message="tns:QuickTellerService_QueryTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/QueryTransactionResponse" message="tns:QuickTellerService_QueryTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemSettings">
+      <wsdl:input wsaw:Action="GetSystemSettings" message="tns:QuickTellerService_GetSystemSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.interswitchng.com/quicktellerservice/QuickTellerService/GetSystemSettingsResponse" message="tns:QuickTellerService_GetSystemSettings_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_QuickTellerService" type="tns:QuickTellerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateUser">
+      <soap:operation soapAction="ActivateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="ResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUserSecurityToken">
+      <soap:operation soapAction="AuthenticateUserSecurityToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillers">
+      <soap:operation soapAction="GetBillers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestBillers">
+      <soap:operation soapAction="GetLatestBillers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeaturedBillers">
+      <soap:operation soapAction="GetFeaturedBillers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillerPaymentItems">
+      <soap:operation soapAction="GetBillerPaymentItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillerCategories">
+      <soap:operation soapAction="GetBillerCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoBillPaymentInquiry">
+      <soap:operation soapAction="DoBillPaymentInquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateCustomer">
+      <soap:operation soapAction="AuthenticateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBillPaymentAdvice">
+      <soap:operation soapAction="SendBillPaymentAdvice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPayments">
+      <soap:operation soapAction="SendPayments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerBillerAccount">
+      <soap:operation soapAction="AddCustomerBillerAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBillerAccounts">
+      <soap:operation soapAction="GetCustomerBillerAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPayments">
+      <soap:operation soapAction="GetCustomerPayments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBillerCustomer">
+      <soap:operation soapAction="AddBillerCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectionsAccount">
+      <soap:operation soapAction="GetCollectionsAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillersCollectionsAccount">
+      <soap:operation soapAction="GetBillersCollectionsAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCustomerBillerAccount">
+      <soap:operation soapAction="EditCustomerBillerAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResendActivationToken">
+      <soap:operation soapAction="ResendActivationToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoCustomProcessing">
+      <soap:operation soapAction="DoCustomProcessing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBiller">
+      <soap:operation soapAction="CreateBiller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyBiller">
+      <soap:operation soapAction="VerifyBiller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCustomer">
+      <soap:operation soapAction="ValidateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoTransfer">
+      <soap:operation soapAction="DoTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTransfer">
+      <soap:operation soapAction="CancelTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSessionKey">
+      <soap:operation soapAction="SendSessionKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransfer">
+      <soap:operation soapAction="QueryTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseCashOut">
+      <soap:operation soapAction="AuthoriseCashOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseAccountCashOut">
+      <soap:operation soapAction="AuthoriseAccountCashOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReverseCashOut">
+      <soap:operation soapAction="ReverseCashOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusCheck">
+      <soap:operation soapAction="StatusCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransaction">
+      <soap:operation soapAction="QueryTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemSettings">
+      <soap:operation soapAction="GetSystemSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuickTellerService">
+    <wsdl:port name="BasicHttpBinding_QuickTellerService" binding="tns:BasicHttpBinding_QuickTellerService">
+      <soap:address location="https://orion.interswitchng.com/quicktellerservice/QuickTeller.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="nameenquirysingleitem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="nameenquirysingleitemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nameenquirysingleitemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fundtransfersingleitem_dc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fundtransfersingleitem_dcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fundtransfersingleitem_dcResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="txnstatusquerysingleitem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="txnstatusquerysingleitemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="txnstatusquerysingleitemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="newNIPTSQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="newNIPTSQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newNIPTSQResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCharges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getChargesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getChargesResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountStatement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountStatementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountStatementResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundTransfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundTransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FundTransferResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundTransferStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundTransferStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FundTransferStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundTransferReversal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundTransferReversalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FundTransferReversalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameEnquiryInhouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nuban" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameEnquiryInhouseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameEnquiryInhouseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Confirmtxnstatusquerysingleitem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmtxnstatusquerysingleitemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmtxnstatusquerysingleitemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSessionIDExistence">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creditAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="debitAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSessionIDExistenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSessionIDExistenceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SSMEncryptData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SSMEncryptDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SSMEncryptDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SSMDecryptData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SSMDecryptDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SSMDecryptDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SSMHashwithSHA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SSMHashwithSHAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SSMHashwithSHAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="nameenquirysingleitemSoapIn">
+    <wsdl:part name="parameters" element="tns:nameenquirysingleitem" />
+  </wsdl:message>
+  <wsdl:message name="nameenquirysingleitemSoapOut">
+    <wsdl:part name="parameters" element="tns:nameenquirysingleitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="fundtransfersingleitem_dcSoapIn">
+    <wsdl:part name="parameters" element="tns:fundtransfersingleitem_dc" />
+  </wsdl:message>
+  <wsdl:message name="fundtransfersingleitem_dcSoapOut">
+    <wsdl:part name="parameters" element="tns:fundtransfersingleitem_dcResponse" />
+  </wsdl:message>
+  <wsdl:message name="txnstatusquerysingleitemSoapIn">
+    <wsdl:part name="parameters" element="tns:txnstatusquerysingleitem" />
+  </wsdl:message>
+  <wsdl:message name="txnstatusquerysingleitemSoapOut">
+    <wsdl:part name="parameters" element="tns:txnstatusquerysingleitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="newNIPTSQSoapIn">
+    <wsdl:part name="parameters" element="tns:newNIPTSQ" />
+  </wsdl:message>
+  <wsdl:message name="newNIPTSQSoapOut">
+    <wsdl:part name="parameters" element="tns:newNIPTSQResponse" />
+  </wsdl:message>
+  <wsdl:message name="getChargesSoapIn">
+    <wsdl:part name="parameters" element="tns:getCharges" />
+  </wsdl:message>
+  <wsdl:message name="getChargesSoapOut">
+    <wsdl:part name="parameters" element="tns:getChargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountStatementSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountStatement" />
+  </wsdl:message>
+  <wsdl:message name="AccountStatementSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="FundTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:FundTransfer" />
+  </wsdl:message>
+  <wsdl:message name="FundTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:FundTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="FundTransferStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:FundTransferStatus" />
+  </wsdl:message>
+  <wsdl:message name="FundTransferStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:FundTransferStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="FundTransferReversalSoapIn">
+    <wsdl:part name="parameters" element="tns:FundTransferReversal" />
+  </wsdl:message>
+  <wsdl:message name="FundTransferReversalSoapOut">
+    <wsdl:part name="parameters" element="tns:FundTransferReversalResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameEnquiryInhouseSoapIn">
+    <wsdl:part name="parameters" element="tns:NameEnquiryInhouse" />
+  </wsdl:message>
+  <wsdl:message name="NameEnquiryInhouseSoapOut">
+    <wsdl:part name="parameters" element="tns:NameEnquiryInhouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmtxnstatusquerysingleitemSoapIn">
+    <wsdl:part name="parameters" element="tns:Confirmtxnstatusquerysingleitem" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmtxnstatusquerysingleitemSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmtxnstatusquerysingleitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSessionIDExistenceSoapIn">
+    <wsdl:part name="parameters" element="tns:getSessionIDExistence" />
+  </wsdl:message>
+  <wsdl:message name="getSessionIDExistenceSoapOut">
+    <wsdl:part name="parameters" element="tns:getSessionIDExistenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SSMEncryptDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SSMEncryptData" />
+  </wsdl:message>
+  <wsdl:message name="SSMEncryptDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SSMEncryptDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SSMDecryptDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SSMDecryptData" />
+  </wsdl:message>
+  <wsdl:message name="SSMDecryptDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SSMDecryptDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SSMHashwithSHASoapIn">
+    <wsdl:part name="parameters" element="tns:SSMHashwithSHA" />
+  </wsdl:message>
+  <wsdl:message name="SSMHashwithSHASoapOut">
+    <wsdl:part name="parameters" element="tns:SSMHashwithSHAResponse" />
+  </wsdl:message>
+  <wsdl:portType name="processmessageSoap">
+    <wsdl:operation name="nameenquirysingleitem">
+      <wsdl:input message="tns:nameenquirysingleitemSoapIn" />
+      <wsdl:output message="tns:nameenquirysingleitemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fundtransfersingleitem_dc">
+      <wsdl:input message="tns:fundtransfersingleitem_dcSoapIn" />
+      <wsdl:output message="tns:fundtransfersingleitem_dcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="txnstatusquerysingleitem">
+      <wsdl:input message="tns:txnstatusquerysingleitemSoapIn" />
+      <wsdl:output message="tns:txnstatusquerysingleitemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="newNIPTSQ">
+      <wsdl:input message="tns:newNIPTSQSoapIn" />
+      <wsdl:output message="tns:newNIPTSQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCharges">
+      <wsdl:input message="tns:getChargesSoapIn" />
+      <wsdl:output message="tns:getChargesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountStatement">
+      <wsdl:input message="tns:AccountStatementSoapIn" />
+      <wsdl:output message="tns:AccountStatementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FundTransfer">
+      <wsdl:input message="tns:FundTransferSoapIn" />
+      <wsdl:output message="tns:FundTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferStatus">
+      <wsdl:input message="tns:FundTransferStatusSoapIn" />
+      <wsdl:output message="tns:FundTransferStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferReversal">
+      <wsdl:input message="tns:FundTransferReversalSoapIn" />
+      <wsdl:output message="tns:FundTransferReversalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameEnquiryInhouse">
+      <wsdl:input message="tns:NameEnquiryInhouseSoapIn" />
+      <wsdl:output message="tns:NameEnquiryInhouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Confirmtxnstatusquerysingleitem">
+      <wsdl:input message="tns:ConfirmtxnstatusquerysingleitemSoapIn" />
+      <wsdl:output message="tns:ConfirmtxnstatusquerysingleitemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSessionIDExistence">
+      <wsdl:input message="tns:getSessionIDExistenceSoapIn" />
+      <wsdl:output message="tns:getSessionIDExistenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SSMEncryptData">
+      <wsdl:input message="tns:SSMEncryptDataSoapIn" />
+      <wsdl:output message="tns:SSMEncryptDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SSMDecryptData">
+      <wsdl:input message="tns:SSMDecryptDataSoapIn" />
+      <wsdl:output message="tns:SSMDecryptDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SSMHashwithSHA">
+      <wsdl:input message="tns:SSMHashwithSHASoapIn" />
+      <wsdl:output message="tns:SSMHashwithSHASoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="processmessageSoap" type="tns:processmessageSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="nameenquirysingleitem">
+      <soap:operation soapAction="http://tempuri.org/nameenquirysingleitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fundtransfersingleitem_dc">
+      <soap:operation soapAction="http://tempuri.org/fundtransfersingleitem_dc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="txnstatusquerysingleitem">
+      <soap:operation soapAction="http://tempuri.org/txnstatusquerysingleitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newNIPTSQ">
+      <soap:operation soapAction="http://tempuri.org/newNIPTSQ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCharges">
+      <soap:operation soapAction="http://tempuri.org/getCharges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountStatement">
+      <soap:operation soapAction="http://tempuri.org/AccountStatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransfer">
+      <soap:operation soapAction="http://tempuri.org/FundTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferStatus">
+      <soap:operation soapAction="http://tempuri.org/FundTransferStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferReversal">
+      <soap:operation soapAction="http://tempuri.org/FundTransferReversal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameEnquiryInhouse">
+      <soap:operation soapAction="http://tempuri.org/NameEnquiryInhouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirmtxnstatusquerysingleitem">
+      <soap:operation soapAction="http://tempuri.org/Confirmtxnstatusquerysingleitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSessionIDExistence">
+      <soap:operation soapAction="http://tempuri.org/getSessionIDExistence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSMEncryptData">
+      <soap:operation soapAction="http://tempuri.org/SSMEncryptData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSMDecryptData">
+      <soap:operation soapAction="http://tempuri.org/SSMDecryptData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSMHashwithSHA">
+      <soap:operation soapAction="http://tempuri.org/SSMHashwithSHA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="processmessageSoap12" type="tns:processmessageSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="nameenquirysingleitem">
+      <soap12:operation soapAction="http://tempuri.org/nameenquirysingleitem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fundtransfersingleitem_dc">
+      <soap12:operation soapAction="http://tempuri.org/fundtransfersingleitem_dc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="txnstatusquerysingleitem">
+      <soap12:operation soapAction="http://tempuri.org/txnstatusquerysingleitem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newNIPTSQ">
+      <soap12:operation soapAction="http://tempuri.org/newNIPTSQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCharges">
+      <soap12:operation soapAction="http://tempuri.org/getCharges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountStatement">
+      <soap12:operation soapAction="http://tempuri.org/AccountStatement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransfer">
+      <soap12:operation soapAction="http://tempuri.org/FundTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferStatus">
+      <soap12:operation soapAction="http://tempuri.org/FundTransferStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundTransferReversal">
+      <soap12:operation soapAction="http://tempuri.org/FundTransferReversal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameEnquiryInhouse">
+      <soap12:operation soapAction="http://tempuri.org/NameEnquiryInhouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirmtxnstatusquerysingleitem">
+      <soap12:operation soapAction="http://tempuri.org/Confirmtxnstatusquerysingleitem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSessionIDExistence">
+      <soap12:operation soapAction="http://tempuri.org/getSessionIDExistence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSMEncryptData">
+      <soap12:operation soapAction="http://tempuri.org/SSMEncryptData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSMDecryptData">
+      <soap12:operation soapAction="http://tempuri.org/SSMDecryptData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSMHashwithSHA">
+      <soap12:operation soapAction="http://tempuri.org/SSMHashwithSHA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="processmessage">
+    <wsdl:port name="processmessageSoap" binding="tns:processmessageSoap">
+      <soap:address location="http://172.13.21.63/JaizNIBSSInterfaceSSM/processmessage.asmx" />
+    </wsdl:port>
+    <wsdl:port name="processmessageSoap12" binding="tns:processmessageSoap12">
+      <soap12:address location="http://172.13.21.63/JaizNIBSSInterfaceSSM/processmessage.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
